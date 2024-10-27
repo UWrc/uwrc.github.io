@@ -3,22 +3,21 @@ id: build
 title: Building Containers
 ---
 
-In this section, we will learn how to:
-* alter and rebuild containers interactively with the sandbox method
-* build containers from a container recipe file called a "definition" file (`.def`)
-* build containers from a previously pulled container that is already on Hyak
+By the end of this tutorial, you will be able to build containers in three different ways: interactively, from a definition file, and from a local image. In this section, we will learn how to:
+* alter and rebuild containers interactively with the sandbox method.
+* build containers from a container recipe file called a "definition" file (`.def`).
+* build containers from a previously pulled container that is already on Hyak.
 
-By the end of this tutorial, you will be able to build containers in three different ways: interactively, from a definition file, and from a local image. 
+:::warning 
+If you are just jumping into this tutorial starting on this page, you should complete the following steps to make sure you have a copy of the materials you need going forward.
 
-## Set Up
-
-In this section, we will build our own custom container using after pulling a base image from [**Docker Hub**](https://hub.docker.com/). To start, ensure that you are using the basics directory as your working directory. 
+To start, ensure that you are in a directory where you have storage, and use this directory as storage for the workshop materials. For example, you can make a directory for yourself in `/gscratch/scrubbed/` 
 ```bash
-pwd
-/gscratch/scrubbed/UWNetID/basics
+cd /gscratch/scrubbed/
+mkdir UWNetID/
 # You should see your UW NetID above replacing the word "UWNetID"
 ```
-If you are just jumping into the tutorial, be sure to make a copy of the basics directory:
+If don't have the workshop materials, please copy them to a directory where you have storage, and use the `basics/` directory as your working directory. Copy and open the basics directory as follows:
 ```bash
 cp -r /sw/hyak101/basics .
 cd basics
@@ -29,6 +28,7 @@ For this tutorial, we will be pulling containers from Docker Hub using Apptainer
 salloc --partition=ckpt-all --cpus-per-task=1 --mem=10G --time=2:00:00
 ```
 #### Use `hyakalloc` to view your available resources. If you are a demo account user, please use the `ckpt-all` partition as shown above. 
+:::
 
 ## Building a Container Interactively
 
@@ -72,15 +72,6 @@ org.opencontainers.image.ref.name: ubuntu
 org.opencontainers.image.version: 24.04
 ```
 
-:::tip
-For additional information regarding Apptainer commands:
-
-```bash
-apptainer --help
-```
-All Apptainer commands can also be found [**HERE**](https://apptainer.org/docs/user/main/quick_start.html)
-:::
-
 As with previous execises, you can use `apptainer shell` to open a shell into `ubuntu_latest.sif` and execute commands interactively. 
 
 Before we do that, let's check the native version of Git that is installed on Hyak.
@@ -108,7 +99,7 @@ Next, we will demonstrate how to convert the container into a sandbox so that ad
 
 ### Sandboxing
 
-In this section we will create a writable directory known as a "sandbox" for this container, allowing for file modifications and additional software installations. This method of container development is available and may fit the preferences of some users, but it isn't the recommended method for building custom containers because it doesn't include a record of the steps taken for further container development. Additionally, this might not work with some containers because it brings the user space of the container into the kernal space of the host, `klone` which could lead to some incompatibilities. However, we want to demonstrate this so that you can explore the method and determine if it fits your needs. 
+In this section we will create a writable directory known as a "sandbox" for this container, allowing for file modifications and additional software installations. This method of container development is available and may fit the preferences of some users, but it isn't the recommended method for building custom containers because it doesn't include a record of the steps taken for further container development. Additionally, this might not work with some containers because it brings the user space of the container into the kernel space of the host, which could lead to some incompatibilities. However, we want to demonstrate this so that you can explore the method and determine if it fits your needs. 
 
 Convert our Ubuntu container into a sandbox with the following command: 
 ```bash
@@ -153,10 +144,10 @@ WARNING: Skipping mount /var/spool/slurmd [binds]: /var/spool/slurmd doesn't exi
 WARNING: Skipping mount /var/run/munge [binds]: /var/run/munge doesn't exist in container
 ```
 
-The `--fakeroot` tag allows users who may not have root access to simulate running a container as root. Because all Apptainer containers are read-only by default, the `--writable` tag is used to allow users to make changes to the container's filesystem. The command prompt will now start with `Apptainer>` if you successfully shelled into ubuntu_latest. 
+The `--fakeroot` flag allows users who may not have root access to simulate running a container as root. Because all Apptainer containers are read-only by default, the `--writable` flag is used to allow users to make changes to the container's filesystem. The command prompt will now start with `Apptainer>` if you successfully shelled into ubuntu_latest. 
 
 ### Installing Git
-Finally, we can install Git into the container. Before proceeding with this installation, it is important to first update the package information in `ubuntu_latest` sandbox container. The next command refreshes packages lists, updates package information, and updates the local cache; without updating the package information the Git package can not be found and installed. To start an update, use the Ubuntu package manager `apt`:
+Finally, we can install Git into the container. Before proceeding with this installation, it is important to first update the package information in `ubuntu_latest` sandbox container. The next command refreshes package lists, updates package information, and updates the local cache; without updating the package information the Git package can not be found and installed. To start an update, use the Ubuntu package manager `apt`:
 ```bash
 apt -y update
 ```
@@ -189,7 +180,7 @@ You can check the version of git installed outside the shell with:
 ```bash
 apptainer exec ubuntu_latest_git.sif git --version
 ```
-Next we'll demonstrate how to do the same thing, build a custom Ubuntu container with additional software installed, but this time from a definition file. 
+Next we'll demonstrate how to do the same thing: build a custom Ubuntu container with additional software installed, but this time from a definition file. 
 
 ## Building a Container with a Definition File
 In the previous example, you built a container interactively. Alternatively, you can build a container by creating your own set of "blueprints" for your container. These blueprints are called Apptainer definition files. Definition files should include information such as the base operating system your custom container should start with and instructions to install software. Definition files provide a record of what you did to build your container, adding crucial documentation of your process. 
@@ -215,7 +206,7 @@ From: ubuntu
 ```
 Let's break down what these sections do when Apptainer builds the container: 
 * All definition files start with `Bootstrap` followed by the bootstrap agent which specifies the base operating system the container image will use. In this tutorial, we will be using the Docker bootstrap agent. Other agents you may come across are localimage, oras, and scratch. 
-* `From: ubuntu` indicates what image you want to use or the specific repository in Docker Hub you are pulling from. In this case, we are using the Ubuntu repository and without further specifications, the starting OS will be the latest version of Ubuntu available on Docker Hub. 
+* `From: ubuntu` indicates what image you want to use or the specific publisher in Docker Hub you are pulling from. In this case, we are using the Ubuntu repository and without further specifications, the starting OS will be the latest version of Ubuntu available on Docker Hub. 
 * The `%post` section is where new software and files can be downloaded and new directories can be made. Here we are updating package information, and this time we will install Git and Curl into the container.
 * The `%runscript` section can be used to test your container; the commands under the `%runscript` section will be executed when the command `apptainer run` is used.  
 
@@ -223,7 +214,7 @@ Save and exit the text editor. Use `Ctrl+x` to exit the text editor. Next we wil
 ```bash
 apptainer build git-container.sif container-build.def
 ```
-The build should take 1-2 minutes.
+The build should take 1-2 minutes. The completed container will be called `git-container.sif`.
 ```bash
 INFO:    User not listed in /etc/subuid, trying root-mapped namespace
 INFO:    The %post section will be run under fakeroot
@@ -241,7 +232,7 @@ INFO:    Creating SIF file...
 INFO:    Build complete: git-container.sif
 ```
 
-FInally, use `apptainer run` to run the runscript and test the container. 
+FInally, use `apptainer run` to execute the runscript and test the container. In this case, the runscript executes commands to print the versions of Curl and Git.
 ```bash
 apptainer run git-container.sif
 ```
@@ -255,7 +246,7 @@ git version 2.43.0
 ## Building a Container From a Local Image
 Instead of pulling a container image from the internet to build your custom container, you can use a local image to build your container. This can be usful to containue customizing your containers by continuing to build upon them and installing additional software for your project. 
 
-If you followed the previous section of the tutorial on [**Pulling Containers**](https://hyak.uw.edu/docs/hyak101/containers/demonstration), you should have the `python_3.9.20-slim-bullseye.sif` container. In this section, we will install TensorFlow using `python_3.9.20-slim-bullseye.sif`. Start by creating a new definition file.
+If you followed the previous section of the tutorial on [**Pulling Containers**](https://hyak.uw.edu/docs/hyak101/containers/demonstration), you should have the `python_3.9.20-slim-bullseye.sif` container. In this section, we will install TensorFlow using Python that is installed inside `python_3.9.20-slim-bullseye.sif`. Start by creating a new definition file.
 ```bash
 nano tf-python3.def
 ```
@@ -272,6 +263,8 @@ From: python_3.9.20-slim-bullseye.sif
         python -c 'print("Hello from your custom Python Container Image!")'
         python -c 'import tensorflow as tf ; print("Container TensorFlow Version =",tf.__version__)'
 ```
+Notice that this time we are using `localimage` as the Bootstrap agent, which means that Apptainer will find the named image after the `From:` directive and use it as the base operating system image. The installation instructions for TensorFlow then follow in the `%post` section, and the `%runscript` section contains instructions to print a greeting and the version of TensorFlow installed in the container when `apptainer run` is executed. 
+
 Like before, build the container using the definition file. `tensorflow_py3.sif` will be the name of the new container.
 ```bash
 apptainer build tensorflow_py3.sif tf-python3.def
@@ -309,13 +302,13 @@ To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other ope
 TensorFlow Version = 2.17.0
 ```
 
-Finally, we prepared a script to demonstrate TensorFlow with this container. You should have the python file `tf_tutorial.py` in your basics directory. You can now bind the filesystem with `--bind` and run the python script with the following command:
+Finally, we prepared a script to demonstrate TensorFlow with this container. You should have the python file `tf_tutorial.py` in your basics directory. You can now bind the filesystem with `--bind` and run the Python script with the following command:
 ```bash
 apptainer exec --bind /gscratch/ tensorflow_py3.sif python tf_tutorial.py
 ```
 
-You now have built Apptainer containers in three different ways: interactively, from a definition file, and from a local image. We hope you will be able to adapt these methods to fit your needs and the needs of your research project. If you have any questions or suggestions for how to improve this tutorial, please email **help@uw.edu** with "Hyak" in the subject line, and let us know what you think. Thank you! 
+You have now built Apptainer containers in three different ways: interactively, from a definition file, and from a local image. We hope you will be able to adapt these methods to fit your needs and the needs of your research project. If you have any questions or suggestions for how to improve this tutorial, please email **help@uw.edu** with "Hyak Containers Tutorial" in the subject line, and let us know what you think. Thank you! 
 
 :::important Acknowledgements
-The script `tf_tutorial.py` is the "TensorFlow 2 quickstart for beginners" from https://www.tensorflow.org/tutorials/quickstart/beginner made into a script with minimal adaptions. 
+`tf_tutorial.py` is the "TensorFlow 2 quickstart for beginners" from https://www.tensorflow.org/tutorials/quickstart/beginner made into a script with minimal adaptions. 
 :::
