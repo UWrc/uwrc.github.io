@@ -60,7 +60,7 @@ We are not going to run this script right now, but when we do, it produces an ou
 
 This script may take a little hacking on your part: while the Bash portion should work regardless
 of your operating system, there are too many versions of `sed` to make this work for everyone.
-You can download the script [here](https://hyak.uw.edu/files/hyak101/python/set-hyak-node.sh), and we'll walk through it afterwards:
+[**You can download the script by clicking here**](https://hyak.uw.edu/files/hyak101/python/set-hyak-node.sh), and we'll walk through it afterwards:
 
 ```bash title="set-hyak-node.sh"
 #!/bin/bash
@@ -140,7 +140,13 @@ If Hostname is left blank (i.e., no placeholder) this will not work. Edit `~/.ss
 **These steps are to be performed on your local computer**
 :::
 
-I swear, this is the last one. [**You can download it to your local computer by clicking here**](https://hyak.uw.edu/files/hyak101/python/start-jupyter-forwarding.sh). We'll use it during the start up sequence. The takeaway message is that this script gets your Jupyter session information from `klone` (via all the ssh configurations you set up), starts port forwarding, and gives you instructions for accessing Jupyter through the Browser on your local computer.
+I swear, this is the last one. [**You can download it to your local computer by clicking here**](https://hyak.uw.edu/files/hyak101/python/start-jupyter-forwarding.sh). Don't forget to make the script executabe after you download it. 
+
+```bash
+chmod +x start-jupyter-forwarding.sh
+```
+
+We'll use it during the start up sequence. The takeaway message is that this script gets your Jupyter session information from `klone` (via all the ssh configurations you set up), starts port forwarding, and gives you instructions for accessing Jupyter through the Browser on your local computer.
 
 :::tip EXTRA CREDIT: Understanding the Script
 
