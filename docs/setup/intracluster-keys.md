@@ -15,11 +15,11 @@ This command creates a 2048-bit RSA key with `klone` in the comment field.
 
 ### Authorizing the keys
 
-You will also need to add the contents of your public key to the `authorized_keys` file in your home directory with the follow commands:
+You will also need to add the contents of your public key to the `authorized_keys` file in your home directory with the following commands:
 
 ```
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
 ```
 
-This also also ensures the `authorized_keys` file has appropriate permissions.
+This also ensures the `authorized_keys` file has appropriate permissions.

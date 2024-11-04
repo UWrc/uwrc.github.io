@@ -73,12 +73,12 @@ This command creates a 2048-bit RSA key with `klone` in the comment field and wi
 ```bash title="id_rsa.pub"
 ssh-rsa AAAAB3NzaC1...SOME_OTHER_STRING...FbFvEYcw== klone
 ```
-Next, add the contents of your public key to the `authorized_keys` file in your home directory with the follow commands:
+Next, add the contents of your public key to the `authorized_keys` file in your home directory with the following commands:
 ```bash
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
 ```
-This also also ensures the `authorized_keys` file has appropriate permissions.
+This also ensures the `authorized_keys` file has appropriate permissions.
 
 Your `authorized_keys` file should have at least two keypairs: one for your local computer and one for `klone`. 
 ```bash 
