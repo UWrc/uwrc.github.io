@@ -73,6 +73,22 @@ NODE=$(ssh klone-login 'squeue \
     --noheader ')
 sed -I '' -E s"/Hostname.*/Hostname $NODE/" ~/.ssh/klone-node-config
 ```
+:::note
+For at least one other version of `sed` this script works after a small adjustment. If the script version above doesn't work for you, try the following: 
+
+```bash title="set-hyak-node.sh"
+#!/bin/bash
+NODE=$(ssh klone-login 'squeue \
+    --user $USER \
+    --states RUNNING \
+    --name klone-container \
+    --Format NodeList \
+    --noheader ')
+    //highlight-next-line
+sed -i -E s"/Hostname.*/Hostname $NODE/" ~/.ssh/klone-node-config
+```
+:::
+
 
 Don't forget to make the script executable. 
 ```bash
