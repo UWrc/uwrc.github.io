@@ -13,7 +13,7 @@ title: Glossary
 
 <a name="checkpoint" /> <br /><br /><br />
 
-[**Checkpoint partition**](#checkpoint): Abbreviated `ckpt`, represents idle resources across the cluster at any moment. All cluster users are eligible to submit jobs to this partition and they will run subject to availability. To provide some regular churn in pending checkpoint jobs, jobs running for >4 hours are re-queued (i.e., re-submitted to the checkpoint partition queue). The jobs will continue in this manner until the job exits or the requested runtime is fulfilled. For more information see [**Compute > Using Idle Resources**](https://hyak.uw.edu/docs/compute/checkpoint#the-checkpoint-partition)
+[**Checkpoint partitions**](#checkpoint): Abbreviated `ckpt`, `ckpt-g2`, and `ckpt-all`, represents idle resources across the cluster at any moment. All cluster users are eligible to submit jobs to this partition and they will run subject to availability. To provide some regular churn in pending checkpoint jobs, jobs running for >4 hours are re-queued (i.e., re-submitted to the checkpoint partition queue). The jobs will continue in this manner until the job exits or the requested runtime is fulfilled. For more information see [**Compute > Using Idle Resources**](https://hyak.uw.edu/docs/compute/checkpoint#the-checkpoint-partition)
 
 <a name="Containers" /> <br /><br /><br />
 
@@ -47,7 +47,7 @@ title: Glossary
 
 <a name="Partition" /> <br /><br /><br />
 
-[**Partition**](#partition): A partition is a logical subdivision of the Hyak cluster resources. Specifically, each partition represents a class of node. For example, the partitions on the cluster are compute, ckpt,interactive, and GPU nodes.
+[**Partition**](#partition): A partition is a logical subdivision of the Hyak cluster resources. Specifically, each partition represents a class of node. For example, the partitions on the cluster are `compute`, `cpu-g2`, `ckpt`, `ckpt-g2`, `ckpt-all`,`compute-bigmem`,`cpu-g2-mem2x`, and GPU nodes. `hyakalloc` will display paritions in addition to `ckpt` that you can submit jobs with (i.e., under the Slurm `sbatch` directive `--partition`).
 
 <a name="Port_Forwarding" /> <br /><br /><br />
 
@@ -55,7 +55,7 @@ title: Glossary
 
 <a name="queue" /> <br /><br /><br />
 
-[**Queue**](#queue): A queue is a waiting area for jobs that have been submitted to the cluster but are not yet executing. The scheduler manages the order in which jobs are taken from the queue for execution.
+[**Queue**](#queue): A queue is a waiting area for jobs that have been submitted to the cluster but are not yet executing. The scheduler manages the order in which jobs are taken from the queue for execution. The Slurm queue can be monitored with the command `squeue` and `squeue -u UWNetID` replacing the word `UWNetID` with your UW Net ID will show you submitted that are waiting in the queue or are being executed.
 
 <a name="scheduler" /> <br /><br /><br />
 
