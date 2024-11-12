@@ -129,7 +129,37 @@ For some of the next presented exercises, you can ignore the `--account` flag, a
 
 :::
 
+While you won't necessarily have access to them, it might be useful for you to see a list of Hyak's partitions. The `sinfo` commands contains information about the servers or nodes that compose Hyak, and the `sinfo -s` commands give you a summary for this information including the partitions and the hostnames that fall into each partition. 
+
+```bash
+sinfo -s
+```
+```bash
+PARTITION        AVAIL  TIMELIMIT   NODES(A/I/O/T) NODELIST
+compute-bigmem      up   infinite        28/0/0/28 n[3008-3011,3064,3066,3132-3133,3190,3244-3247,3252-3255,3353-3355,3400-3407]
+ckpt                up   infinite   327/173/10/510 g[3001-3007,3010-3017,3020-3027,3030-3037,3040-3047,3050-3057,3060-3067,3070-3077,3080-3085],n[3000-3431],z[3001-3002,3005-3011]
+ckpt-all            up   infinite   368/195/10/573 g[3001-3007,3010-3017,3020-3027,3030-3037,3040-3047,3050-3057,3060-3067,3070-3077,3080-3085,3090-3122],n[3000-3461],z[3001-3002,3005-3011]
+ckpt-g2             up   infinite       41/22/0/63 g[3090-3122],n[3432-3461]
+compute*            up   infinite    197/170/7/374 n[3012-3015,3024-3063,3068-3131,3134-3189,3191-3239,3248-3251,3256-3299,3304-3352,3356-3363,3368-3399,3408-3431]
+cpu-g2              up   infinite        7/19/0/26 n[3432-3438,3440,3442,3444,3446-3461]
+cpu-g2-mem2x        up   infinite          2/2/0/4 n[3439,3441,3443,3445]
+gpu-2080ti          up   infinite        10/1/2/13 g[3001-3007,3014-3017,3027],z3001
+gpu-a100            up   infinite          8/0/0/8 g[3080-3085],z[3010-3011]
+gpu-a40             up   infinite        32/0/0/32 g[3040-3047,3050-3057,3060-3067,3070-3077]
+gpu-l40             up   infinite        15/0/0/15 g[3090-3099,3115-3119]
+gpu-l40s            up   infinite        17/1/0/18 g[3100-3114,3120-3122]
+gpu-p100            up   infinite          2/0/0/2 z[3005-3006]
+gpu-rtx6k           up   infinite        19/0/0/19 g[3010-3013,3020-3026,3030-3037]
+gpu-titan           up   infinite          1/0/0/1 z3002
+compute-hugemem     up   infinite        27/2/1/30 n[3000-3007,3016-3023,3065,3067,3240-3243,3300-3303,3364-3367]
+compute-ultramem    up   infinite          3/0/0/3 z[3007-3009]
+```
+
+
+
 :::tip Pro Tip
+#### Monitoring the Slurm Job Queue
+
 In the following section, it is often useful to have two terminal windows open and logged into `klone`. One for editing scipts and issuing commands and one for monitoring active jobs in the squeue. Open up a second terminal and use `ssh` to login to Hyak. In this terminal, monitor jobs using the command:
 ```bash
 # Below replace the word "UWNetID" with your UW NetID.
@@ -374,3 +404,8 @@ The purpose of this exercise was to execute a command via a batch job. The `loop
 :::tip Pro tip - multithreading
 TODO 
 :::
+
+
+### Literature Cited
+
+Gardner, Dylan, Robben Migacz, and Brian Haymore. "Arbiter: Dynamically Limiting Resource Consumption on Login Nodes." Proceedings of the Practice and Experience in Advanced Research Computing on Rise of the Machines (learning). 2019. 1-7. [DOI: [**10.1145/3332186.3333043**](https://doi.org/10.1145/3332186.3333043)] [Code: [**Gitlab**](https://gitlab.chpc.utah.edu/arbiter2/arbiter2)] <a name="ref_arbiter" />
