@@ -35,7 +35,7 @@ export default function Publications() {
     <div class="row">
       <Tabs
         className="unique-tabs"
-        defaultValue="2022"
+        defaultValue="2024"
         values={[
           {label: '2024', value: '2024'},
           {label: '2023', value: '2023'},
