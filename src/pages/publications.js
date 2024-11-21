@@ -37,12 +37,162 @@ export default function Publications() {
         className="unique-tabs"
         defaultValue="2022"
         values={[
+          {label: '2024', value: '2024'},
+          {label: '2023', value: '2023'},
           {label: '2022', value: '2022'},
           {label: '2021', value: '2021'},
           {label: '2020', value: '2020'},
           {label: '2019', value: '2019'},
         ]}>
-        
+        <TabItem value="2024">
+
+        <h4>Aeronautics and Astronautics</h4>
+          <ol>
+            <li>Three-Dimensionality of Vertical Axis Cross-Flow Turbine Flow in High Confinement - ProQuest. https://www.proquest.com/docview/3081569739?pq-origsite=gscholar&fromopenview=true&sourcetype=Dissertations%20&%20Theses (accessed 2024-11-07).</li>
+            <li>Spencer, F.; Nino, G.; Wai, J.; Wai, J. M.; Breidenthal, R. Mixing in a Novel Rocket Engine. In AIAA SCITECH 2024 Forum; AIAA SciTech Forum; American Institute of Aeronautics and Astronautics, 2024. DOI: https://doi.org/10.2514/6.2024-0346.</li>
+            <li>Spalart, P. R.; Dodd, M. S. Theory and Simulations of Confined Periodic Turbulence. Journal of Turbulence 2024, 25 (4–6), 145–156. DOI: https://doi.org/10.1080/14685248.2024.2342265.</li>
+          </ol>
+        <h4>Bioengineering</h4>
+          <ol>
+
+            <li>Bifulco, S. F.; Macheret, F.; Scott, G. D.; Akoum, N.; Boyle, P. M. Explainable Machine Learning to Predict Anchored Reentry Substrate Created by Persistent Atrial Fibrillation Ablation in Computational Models. Journal of the American Heart Association 2023, 12 (16), e030500. DOI: https://doi.org/10.1161/JAHA.123.030500.</li>
+            <li>Gibbs, C. E.; Boyle, P. M. Population-Based Computational Simulations Elucidate Mechanisms of Focal Arrhythmia Following Stem Cell Injection Chelsea E Gibbs and Patrick M Boyle. Social Science Research Network: Rochester, NY October 8, 2024. DOI: https://doi.org/10.2139/ssrn.4968992.</li>
+          </ol>
+        <h4>Biology</h4>
+          <ol>
+            <li>Wang, B.; Torok, Z.; Duffy, A.; Bell, D. G.; Wongso, S.; Velho, T. A. F.; Fairhall, A. L.; Lois, C. Unsupervised Restoration of a Complex Learned Behavior after Large-Scale Neuronal Perturbation. Nat Neurosci 2024, 27 (6), 1176–1186. DOI: https://doi.org/10.1038/s41593-024-01630-6.</li>
+            <li>Broshkevitch CJ, Barnabas RV, Liu G, Palanee-Phillips T, Rao DW (2024) Enhanced cervical cancer and HIV interventions reduce the disproportionate burden of cervical cancer cases among women living with HIV: A modeling analysis. PLoS ONE 19(5): e0301997. DOI: https://doi.org/10.1371/journal.pone.0301997</li>
+            <li>Jin, K.; McCoy, B. M.; Goldman, E. A.; Usova, V.; Tkachev, V.; Chitsazan, A. D.; Kakebeen, A.; Jeffery, U.; Creevy, K. E.; Wills, A.; Snyder-Mackler, N.; Promislow, D. E. L. DNA Methylation and Chromatin Accessibility Predict Age in the Domestic Dog. Aging Cell 2024, 23 (4), e14079. DOI: https://doi.org/10.1111/acel.14079.</li>
+
+          </ol>
+        <h4>Chemical Engineering</h4>
+          <ol>
+            <li>Sanghavi, R.; Intan, N. N.; Xie, S.; Lin, H.; Pfaendtner, J. Reaction Pathway Analysis of PET Deconstruction via Methanolysis and Tertiary Amine Catalysts. J. Phys. Chem. A 2024, 128 (29), 5883–5891. DOI: https://doi.org/10.1021/acs.jpca.4c02276.</li>
+            <li>Qi, X.; Pfaendtner, J. High-Throughput Computational Screening of Solid-Binding Peptides. J. Chem. Theory Comput. 2024, 20 (7), 2959–2968. DOI: https://doi.org/10.1021/acs.jctc.3c01286.</li>
+            <li>Mao, C. M.; Sampath, J.; Pfaendtner, J. Molecular Driving Forces in the Self-Association of Silaffin Peptide R5 from MD Simulations. ChemBioChem 2024, 25 (11), e202300788. DOI: https://doi.org/10.1002/cbic.202300788.</li>
+            <li>Torkelson, K.; Naser, N. Y.; Qi, X.; Li, Z.; Yang, W.; Pushpavanam, K.; Chen, C.-L.; Baneyx, F.; Pfaendtner, J. Rational Design of Novel Biomimetic Sequence-Defined Polymers for Mineralization Applications. Chem. Mater. 2024, 36 (2), 786–794. DOI: https://doi.org/10.1021/acs.chemmater.3c02216.</li>
+            <li>K. Tran, D.; M. West, S.; K. Speck, E. M.; A. Jenekhe, S. Observation of Super-Nernstian Proton-Coupled Electron Transfer and Elucidation of Nature of Charge Carriers in a Multiredox Conjugated Polymer. Chemical Science 2024, 15 (20), 7623–7642. DOI: https://doi.org/10.1039/D4SC00785A.</li>
+
+          </ol>
+        <h4>Chemistry</h4>
+          <ol>
+            <li>Kovtun, M.; Lambros, E.; Liu, A.; Tang, D.; Williams-Young, D. B.; Li, X. Accelerating Relativistic Exact-Two-Component Density Functional Theory Calculations with Graphical Processing Units. J. Chem. Theory Comput. 2024, 20 (18), 7694–7699. DOI: https://doi.org/10.1021/acs.jctc.4c00843.</li>
+            <li>Infrared spectroscopy of the syn-methyl-substituted Criegee intermediate: A combined experimental and theoretical study | The Journal of Chemical Physics | AIP Publishing. https://pubs.aip.org/aip/jcp/article-abstract/160/20/204309/3295490/Infrared-spectroscopy-of-the-syn-methyl?redirectedFrom=fulltext</li>
+            <li>Sandeno, S. F.; Schnitzenbaumer, K. J.; Krajewski, S. M.; Beck, R. A.; Ladd, D. M.; Levine, K. R.; Dayton, D.; Toney, M. F.; Kaminsky, W.; Li, X.; Cossairt, B. M. Ligand Steric Profile Tunes the Reactivity of Indium Phosphide Clusters. J. Am. Chem. Soc. 2024, 146 (5), 3102–3113. DOI: https://doi.org/10.1021/jacs.3c10203.</li>
+            <li>Okura, Y.; Santis, G. D.; Hirata, K.; Melissas, V. S.; Ishiuchi, S.; Fujii, M.; Xantheas, S. S. Switching of Protonation Sites in Hydrated Nicotine via a Grotthuss Mechanism. J. Am. Chem. Soc. 2024, 146 (5), 3023–3030. DOI: https://doi.org/10.1021/jacs.3c08922.</li>
+            <li>Sandeno, S. F.; Krajewski, S. M.; Beck, R. A.; Kaminsky, W.; Li, X.; Cossairt, B. M. Synthesis and Single Crystal X-Ray Diffraction Structure of an Indium Arsenide Nanocluster. ACS Cent. Sci. 2024, 10 (3), 744–751. DOI: https://doi.org/10.1021/acscentsci.3c01451.</li>
+            <li>Okura, Y.; Santis, G. D.; Hirata, K.; Xantheas, S. S.; Fujii, M.; Ishiuchi, S.-I. The Gas Phase Protonation Sites of Six Naturally Occurring Nicotinoids. J. Phys. Chem. Lett. 2024, 15 (27), 6966–6973. DOI: https://doi.org/10.1021/acs.jpclett.4c01206.</li>
+            <li>Li, S.; Lu, L.; Bhattacharyya, S.; Pearce, C.; Li, K.; Nienhuis, E. T.; Doumy, G.; Schaller, R. D.; Moeller, S.; Lin, M.-F.; Dakovski, G.; Hoffman, D. J.; Garratt, D.; Larsen, K. A.; Koralek, J. D.; Hampton, C. Y.; Cesar, D.; Duris, J.; Zhang, Z.; Sudar, N.; Cryan, J. P.; Marinelli, A.; Li, X.; Inhester, L.; Santra, R.; Young, L. Attosecond-Pump Attosecond-Probe x-Ray Spectroscopy of Liquid Water. Science 2024, 383 (6687), 1118–1122. DOI: https://doi.org/10.1126/science.adn6059.</li>
+            <li>Salveson, P. J.; Moyer, A. P.; Said, M. Y.; Gӧkçe, G.; Li, X.; Kang, A.; Nguyen, H.; Bera, A. K.; Levine, P. M.; Bhardwaj, G.; Baker, D. Expansive Discovery of Chemically Diverse Structured Macrocyclic Oligoamides. Science 2024, 384 (6694), 420–428. DOI: https://doi.org/10.1126/science.adk1687.</li>
+            <li>Geary, J.; Aalto, J. P.; Xiao, D. J. Modular Synthesis of Templated Bimetallic Sites in Metal–Organic Framework Pores. Chem. Mater. 2024, 36 (8), 3949–3956. DOI: https://doi.org/10.1021/acs.chemmater.4c00500.</li>
+            <li>Ehrman, J. N.; Shumilov, K.; Jenkins, A. J.; Kasper, J. M.; Vitova, T.; Batista, E. R.; Yang, P.; Li, X. Unveiling Hidden Shake-Up Features in the Uranyl M4-Edge Spectrum. JACS Au 2024, 4 (3), 1134–1141. DOI: https://doi.org/10.1021/jacsau.3c00838.</li>
+          </ol>
+        <h4>Computer Science</h4>
+          <ol>
+            <li>Champion, K. Social and Technical Sources of Risk in Sustaining Digital Infrastructure. Ph.D., University of Washington, United States -- Washington, 2024. https://www.proquest.com/docview/3106218896/abstract/919D99C527294ED4PQ/1</li>
+            <li>Slaughter, I.; Brown, E. M.; Weber, N. The Impact of iBuying Is About More Than Just Racial Disparities: Evidence from Mecklenburg County, NC. In Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency; FAccT ’24; Association for Computing Machinery: New York, NY, USA, 2024; pp 2086–2100. DOI: https://doi.org/10.1145/3630106.3659027.</li>
+            <li>Gardner, J.; Perdomo, J. C.; Schmidt, L. Large Scale Transfer Learning for Tabular Data via Language Modeling. arXiv June 17, 2024. DOI: https://doi.org/10.48550/arXiv.2406.12031.</li>
+
+          </ol>
+        <h4>Environmental Science</h4>
+          <ol>
+            <li>K. C., P. Developing a Framework for Studying Fine Resolution Impacts of Climate Change on Forest Ecosystems at Regional Scale Using Remote Sensing and Artificial Intelligence. Ph.D., University of Washington, United States -- Washington, 2024. https://www.proquest.com/docview/3105592000/abstract/CB91EFDB2214537PQ/1</li>
+            <li>Khatri-Chhetri, P.; van Wagtendonk, L.; Hendryx, S. M.; Kane, V. R. Enhancing Individual Tree Mortality Mapping: The Impact of Models, Data Modalities, and Classification Taxonomy. Remote Sensing of Environment 2024, 300, 113914. DOI: https://doi.org/10.1016/j.rse.2023.113914.</li>
+          </ol>
+        <h4>Materials Science and Engineering</h4>
+          <ol>
+            <li>Salguero, O.; Kim, J. R.; Beckert, A.; Lim, M.; Zhang, S.; Ping, Y.; Faraon, A.; Falson, J.; Idrobo, J. C. Towards Atomic Imaging and Spectroscopy of Er Defects in ZnO. Microscopy and Microanalysis 2024, 30 (Supplement_1), ozae044.775. DOI: https://doi.org/10.1093/mam/ozae044.775.</li>
+            <li>Zhang, X.-W.; Wang, C.; Liu, X.; Fan, Y.; Cao, T.; Xiao, D. Polarization-Driven Band Topology Evolution in Twisted MoTe2 and WSe2. Nat Commun 2024, 15 (1), 4223. DOI: https://doi.org/10.1038/s41467-024-48511-x.</li>
+            <li>Demir, B.; Akin Gultakti, C.; Koker, Z.; Anantram, M. P.; Oren, E. E. Electronic Properties of DNA Origami Nanostructures Revealed by In Silico Calculations. J. Phys. Chem. B 2024, 128 (19), 4646–4654. DOI: https://doi.org/10.1021/acs.jpcb.4c00445.</li>
+              
+          </ol>
+        <h4>Mathematics</h4>
+          <ol>
+            <li>Nicolaou, Z. G.; Bramburger, J. J. Complex Localization Mechanisms in Networks of Coupled Oscillators: Two Case Studies. Chaos: An Interdisciplinary Journal of Nonlinear Science 2024, 34 (1), 013131. DOI: https://doi.org/10.1063/5.0174550.</li>
+          </ol>
+        <h4>Mechanical Engineering</h4>
+          <ol>
+          <li>Novokhodko, A.; Du, N.; Hao, S.; Wang, Z.; Shu, Z.; Ahmad, S.; Gao, D. Predicting the Impact of Dialyzer Choice and Binder Dialysate Flow Rate on Bilirubin Removal. bioRxiv September 30, 2024, p 2024.09.27.615470. DOI: https://doi.org/10.1101/2024.09.27.615470.</li>
+          <li>Straccia, A.; Barbour, M. C.; Chassagne, F.; Bass, D.; Barros, G.; Leotta, D.; Sheehan, F.; Sharma, D.; Levitt, M. R.; Aliseda, A. Numerical Modeling of Flow in the Cerebral Vasculature: Understanding Changes in Collateral Flow Directions in the Circle of Willis for a Cohort of Vasospasm Patients Through Image-Based Computational Fluid Dynamics. Ann Biomed Eng 2024, 52 (9), 2417–2439. DOI: https://doi.org/10.1007/s10439-024-03533-w.</li>
+          </ol>
+        <h4>Physics</h4>
+          <ol>
+            <li>Nicolaou, Z. G.; Bramburger, J. J. Complex Localization Mechanisms in Networks of Coupled Oscillators: Two Case Studies. Chaos: An Interdisciplinary Journal of Nonlinear Science 2024, 34 (1), 013131. DOI: https://doi.org/10.1063/5.0174550.</li>
+            <li>Raval, V. M.; Manookin, M. B.; Rieke, F. Testing and Optimizing RGC Type Selective Stimuli. Investigative Ophthalmology & Visual Science 2024, 65 (7), 2468.</li>
+            <li>Borisiak, K.; Visani, G. M.; Nourmohammad, A. Loop-Diffusion: An Equivariant Diffusion Model for Designing and Scoring Protein Loops. arXiv September 26, 2024. DOI: https://doi.org/10.48550/arXiv.2409.18201.</li>
+            <li>Visani, G. M.; Pun, M. N.; Galvin, W.; Daniel, E.; Borisiak, K.; Wagura, U.; Nourmohammad, A. HERMES: Holographic Equivariant neuRal Network Model for Mutational Effect and Stability Prediction. arXiv July 9, 2024. DOI: https://doi.org/10.48550/arXiv.2407.06703.</li>
+            <li>Pun, M. N.; Ivanov, A.; Bellamy, Q.; Montague, Z.; LaMont, C.; Bradley, P.; Otwinowski, J.; Nourmohammad, A. Learning the Shape of Protein Microenvironments with a Holographic Convolutional Neural Network. Proceedings of the National Academy of Sciences 2024, 121 (6), e2300838121. DOI: https://doi.org/10.1073/pnas.2300838121.</li>
+            <li>Zemlevskiy, N. A. Scalable Quantum Simulations of Scattering in Scalar Field Theory on 120 Qubits. arXiv November 4, 2024. DOI: https://doi.org/10.48550/arXiv.2411.02486.</li>
+            <li>Froland, H.; Zache, T. V.; Ott, R.; Mueller, N. Entanglement Structure of Non-Gaussian States and How to Measure It. arXiv July 16, 2024. DOI: https://doi.org/10.48550/arXiv.2407.12083.</li>
+            <li>Farrell, R. C.; Illa, M.; Ciavarella, A. N.; Savage, M. J. Scalable Circuits for Preparing Ground States on Digital Quantum Computers: The Schwinger Model Vacuum on 100 Qubits. PRX Quantum 2024, 5 (2), 020315. DOI: https://doi.org/10.1103/PRXQuantum.5.020315.</li>
+            <li>Turro, F.; Wendt, K. A.; Quaglioni, S.; Pederiva, F.; Roggero, A. Evaluation of Phase Shifts for Nonrelativistic Elastic Scattering Using Quantum Computers. Phys. Rev. C 2024, 110 (5), 054604. DOI: https://doi.org/10.1103/PhysRevC.110.054604.</li>
+            <li>Bhaskar, R.; Roggero, A.; Savage, M. J. Timescales in Many-Body Fast-Neutrino-Flavor Conversion. Phys. Rev. C 2024, 110 (4), 045801. DOI: https://doi.org/10.1103/PhysRevC.110.045801.</li>
+
+            </ol>
+          
+          
+
+
+
+        </TabItem>
+
+        <TabItem value="2023">
+          <h4>Chemical Engineering</h4>
+          <ol>
+            <li>Komp, E., Alanzi, H.N., Francis, R. et al. Author Correction: Homologous Pairs of Low and High Temperature Originating Proteins Spanning the Known Prokaryotic Universe. Sci Data 10, 750 (2023). DOI: https://doi.org/10.1038/s41597-023-02685-z</li>
+            <li>Dollar, O.; Joshi, N.; Pfaendtner, J.; Beck, D. A. C. Efficient 3D Molecular Design with an E(3) Invariant Transformer VAE. J. Phys. Chem. A 2023, 127 (37), 7844–7852. DOI: https://doi.org/10.1021/acs.jpca.3c04188.</li>
+            <li>Lachowski, K. J.; Chiang, H. T.; Torkelson, K.; Zhou, W.; Zhang, S.; Pfaendtner, J.; Pozzo, L. D. Anisotropic Gold Nanomaterial Synthesis Using Peptide Facet Specificity and Timed Intervention. Langmuir 2023, 39 (45), 15878–15888. DOI: https://doi.org/10.1021/acs.langmuir.3c01577.</li>
+            <li>Vaddi, K.; Li, K.; D. Pozzo, L. Metric Geometry Tools for Automatic Structure Phase Map Generation. Digital Discovery 2023, 2 (5), 1471–1483. DOI: https://doi.org/10.1039/D3DD00105A.</li>
+            <li>Alamdari, S.; Torkelson, K.; Wang, X.; Chen, C.-L.; Ferguson, A. L.; Pfaendtner, J. Thermodynamic Basis for the Stabilization of Helical Peptoids by Chiral Sidechains. J. Phys. Chem. B 2023, 127 (27), 6171–6183. DOI: https://doi.org/10.1021/acs.jpcb.3c01913.</li>
+          </ol>
+          <h4>Chemistry</h4>
+          <ol>
+            <li>Leshchev, D.; J. S. Valentine, A.; Kim, P.; Mills, A. W.; Roy, S.; Chakraborty, A.; Biasin, E.; Haldrup, K.; Hsu, D. J.; Kirschner, M. S.; Rimmerman, D.; Chollet, M.; Glownia, J. M.; van Driel, T. B.; Castellano, F. N.; Li, X.; Chen, L. X. Revealing Excited-State Trajectories on Potential Energy Surfaces with Atomic Resolution in Real Time. Angewandte Chemie International Edition 2023, 62 (28), e202304615. DOI: https://doi.org/10.1002/anie.202304615.</li>
+            <li>Liu, A.; Zhang, T.; Hammes-Schiffer, S.; Li, X. Multicomponent Cholesky Decomposition: Application to Nuclear–Electronic Orbital Theory. J. Chem. Theory Comput. 2023, 19 (18), 6255–6262. https://doi.org/10.1021/acs.jctc.3c00686.</li>
+            <li>Finney, J. M.; Choi, T. H.; Huchmala, R. M.; Heindel, J. P.; Xantheas, S. S.; Jordan, K. D.; McCoy, A. B. Isotope Effects in the Zundel–Eigen Isomerization of H+(H2O)6. J. Phys. Chem. Lett. 2023, 14 (20), 4666–4672. DOI: https://doi.org/10.1021/acs.jpclett.3c00952.</li>
+            <li>A. Kamin, A.; D. Clayton, T.; E. Otteson, C.; M. Gannon, P.; Krajewski, S.; Kaminsky, W.; Jasti, R.; J. Xiao, D. Synthesis and Metalation of Polycatechol Nanohoops Derived from Fluorocycloparaphenylenes. Chemical Science 2023, 14 (36), 9724–9732. DOI: https://doi.org/10.1039/D3SC03561A.</li>
+            <li>Ehrman, J.; Martinez-Baez, E.; Jenkins, A. J.; Li, X. Improving One-Electron Exact-Two-Component Relativistic Methods with the Dirac–Coulomb–Breit-Parameterized Effective Spin–Orbit Coupling. J. Chem. Theory Comput. 2023, 19 (17), 5785–5790. DOI: https://doi.org/10.1021/acs.jctc.3c00479.</li>
+            <li>Liao, C.; Lambros, E.; Sun, Q.; Dyall, K. G.; Li, X. Exploring Locality in Molecular Dirac-Coulomb-Breit Calculations: A Perspective. J. Chem. Theory Comput. 2023, 19 (24), 9009–9017. DOI: https://doi.org/10.1021/acs.jctc.3c01012.</li>
+            <li>Liu, X.; Hayes, D.; Chen, L. X.; Li, X. Bridge-Mediated Metal-to-Metal Electron and Hole Transfer in a Supermolecular Dinuclear Complex: A Computational Study Using Quantum Electron–Nuclear Dynamics. J. Phys. Chem. A 2023, 127 (8), 1831–1838. DOI: https://doi.org/10.1021/acs.jpca.2c07870.</li>
+            <li>Eagle, F. W.; Harvey, S.; Beck, R.; Li, X.; Gamelin, D. R.; Cossairt, B. M. Enhanced Charge Transfer from Coinage Metal Doped InP Quantum Dots. ACS Nanosci. Au 2023, 3 (6), 451–461. DOI: https://doi.org/10.1021/acsnanoscienceau.3c00029.</li>
+            <li>Park, N.; Beck, R. A.; Hoang, K. K.; Ladd, D. M.; Abramson, J. E.; Rivera-Maldonado, R. A.; Nguyen, H. A.; Monahan, M.; Seidler, G. T.; Toney, M. F.; Li, X.; Cossairt, B. M. Colloidal, Room-Temperature Growth of Metal Oxide Shells on InP Quantum Dots. Inorg. Chem. 2023, 62 (17), 6674–6687. DOI: https://doi.org/10.1021/acs.inorgchem.3c00161.</li>
+
+          </ol>
+
+         <h4>Computer Science</h4>
+          <ol>
+            <li>Slaughter, I.; Greenberg, C.; Schwartz, R.; Caliskan, A. Pre-Trained Speech Processing Models Contain Human-Like Biases That Propagate to Speech Emotion Recognition. In Findings of the Association for Computational Linguistics: EMNLP 2023; Bouamor, H., Pino, J., Bali, K., Eds.; Association for Computational Linguistics: Singapore, 2023; pp 8967–8989. DOI: https://doi.org/10.18653/v1/2023.findings-emnlp.602.</li>
+            <li>De, A.; Mohammad, H.; Wang, Y.; Kubendran, R.; Das, A. K.; Anantram, M. P. Performance Analysis of DNA Crossbar Arrays for High-Density Memory Storage Applications. Sci Rep 2023, 13 (1), 6650. DOI: https://doi.org/10.1038/s41598-023-33004-6.</li>
+          </ol>
+         <h4>Neurology</h4>
+          <ol>
+            <li>Prater, K. E.; Green, K. J.; Mamde, S.; Sun, W.; Cochoit, A.; Smith, C. L.; Chiou, K. L.; Heath, L.; Rose, S. E.; Wiley, J.; Keene, C. D.; Kwon, R. Y.; Snyder-Mackler, N.; Blue, E. E.; Logsdon, B.; Young, J. E.; Shojaie, A.; Garden, G. A.; Jayadev, S. Human Microglia Show Unique Transcriptional Changes in Alzheimer’s Disease. Nat Aging 2023, 3 (7), 894–907. DOI: https://doi.org/10.1038/s43587-023-00424-y.</li>
+          </ol>
+        <h4>Materials Science and Engineering</h4>
+          <ol>
+
+            <li>Xie, K.; Zhang, X.-W.; Xiao, D.; Cao, T. Engineering Magnetic Phases of Layered Antiferromagnets by Interfacial Charge Transfer. ACS Nano 2023, 17 (22), 22684–22690. DOI: https://doi.org/10.1021/acsnano.3c07125.</li>
+            <li>Ye, Y.; Qian, J.; Zhang, X.-W.; Wang, C.; Xiao, D.; Cao, T. Kekulé Moiré Superlattices. Nano Lett. 2023, 23 (14), 6536–6543. DOI: https://doi.org/10.1021/acs.nanolett.3c01550.</li>
+          </ol>
+          <h4>Physics</h4>
+
+          <ol>
+            <li>Ciavarella, A. Quantum Simulation of Quantum Field Theories. Ph.D., University of Washington, United States, Washington, 2023. https://www.proquest.com/docview/2864101871/abstract/705F119F746948E7PQ/1</li>
+            <li>Ciavarella, A. N.; Caspar, S.; Singh, H.; Savage, M. J.; Lougovski, P. Simulating Heisenberg Interactions in the Ising Model with Strong Drive Fields. Phys. Rev. A 2023, 108 (4), 042216. DOI: https://doi.org/10.1103/PhysRevA.108.042216.</li>
+            <li>Merritt, J.; Fidkowski, L. Entanglement Transitions with Free Fermions. Phys. Rev. B 2023, 107 (6), 064303. DOI: https://doi.org/10.1103/PhysRevB.107.064303.</li>
+            <li>Yao, X. SU(2) Gauge Theory in $2+1$ Dimensions on a Plaquette Chain Obeys the Eigenstate Thermalization Hypothesis. Phys. Rev. D 2023, 108 (3), L031504. DOI: https://doi.org/10.1103/PhysRevD.108.L031504.</li>
+            <li>Fernando, T.; Cao, T. Quantized Interband Topological Index in Two-Dimensional Systems. Phys. Rev. B 2023, 108 (8), L081111. DOI: https://doi.org/10.1103/PhysRevB.108.L081111.</li>
+            <li>Farrell, R. C.; Chernyshev, I. A.; Powell, S. J. M.; Zemlevskiy, N. A.; Illa, M.; Savage, M. J. Preparations for Quantum Simulations of Quantum Chromodynamics in $1+1$ Dimensions. I. Axial Gauge. Phys. Rev. D 2023, 107 (5), 054512. DOI: https://doi.org/10.1103/PhysRevD.107.054512.</li>
+
+
+          </ol>
+         
+          
+          
+
+
+
+        </TabItem>
         <TabItem value="2022">
           <h4>Computer Science</h4>
           <ol>
