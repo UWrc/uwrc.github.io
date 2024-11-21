@@ -15,9 +15,9 @@ Please refer to the cluster specific sections on `klone` [[link](#klone)] below 
 module avail
 ```
 
-The research computing team will maintain most of the core modules for building software, this includes GNU compilers (e.g., `gcc`, `g++`, `gfortran`) or their Intel compiler equivalents as well as select MPI libraries.
+The Hyak team will maintain most of the core modules for building software, this includes GNU compilers (e.g., `gcc`, `g++`, `gfortran`) or their Intel compiler equivalents as well as select MPI libraries.
 
-There is a larger list of modules maintained by the broader Hyak community that appears when you run this command. **Community created or "contrib" modules are provided as is.** Community modules on `klone` are separated into a lower section and within the lower section each module is further prefixed by the respective group that created the module.
+There is a larger list of modules maintained by the broader Hyak community that appears when you run this command. **Community created or "contrib" modules are provided as is.** Community modules on `klone` are separated into a lower section and within the lower section each module is further prefixed by the respective group that created the module. Not all contributed modules are publicly available.
 
 :::tip
 The Hyak team encourages the use of Apptainer to better promote computational portability and reproducibility. You can read more about Apptainer [[link](containers.md)] after loading its module.
