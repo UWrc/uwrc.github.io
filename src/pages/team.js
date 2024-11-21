@@ -51,9 +51,9 @@ export default function team() {
             src="/img/avatar/avatar_uws_uwit.png"
           />
           <div class="avatar__intro">
-            <h4 class="avatar__name">Matt</h4>
+            <h4 class="avatar__name">Now Hiring</h4>
             <small class="avatar__subtitle">
-              Sr. HPC Systems Engineer
+              HPC Systems Engineer
             </small>
           </div>
         </div>
