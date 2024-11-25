@@ -5,6 +5,6 @@ title: Hyak OOD - Getting Started
 
 :::caution
 
-This documentation is under construction.
+This documentation is under construction!
 
 :::
