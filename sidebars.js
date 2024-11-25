@@ -41,6 +41,10 @@ module.exports = {
       'compute/checkpoint',
       'compute/resource-monitoring',
     ],
+    'Open OnDemand': [
+      'ood/start',
+      'ood/jupyter',
+    ],
     'Tools & Software': [
       'tools/software',
       'tools/modules',
