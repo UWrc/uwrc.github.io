@@ -21,7 +21,7 @@ In order to access OOD you need to have an account on the Hyak cluster. If you d
 
 :::info
 
-If you access OOD from off campus, you will need to connect to the UW VPN. You can find instructions on how to connect to the UW VPN [here](https://itconnect.uw.edu/tools-services-support/networks-connectivity/husky-onnet/).
+If you access OOD from off campus, you will need to connect to the UW VPN. You can find instructions on how to connect to the UW VPN [here](https://itconnect.uw.edu/tools-services-support/networks-connectivity/husky-onnet/installing-configuring-and-using-husky-onnet/).
 
 :::
 
