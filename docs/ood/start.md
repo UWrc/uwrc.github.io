@@ -15,7 +15,7 @@ Open OnDemand is a new service on Hyak and is still in the process of being full
 
 ## What is Open OnDemand?
 
-Open OnDemand (OOD) [[www](https://openondemand.org/)] is a web-based portal that provides an integrated, single access point for access to the Klone HPC Cluster. OOD provides a graphical user interface (GUI) as an alternative to the command line that simplifes the process of submitting jobs, managing files, launching applications, and monitoring job status.
+[Open OnDemand](https://openondemand.org/) (OOD) is a web-based portal that provides an integrated, single access point for access to the Klone HPC Cluster. OOD provides a graphical user interface (GUI) as an alternative to the command line that simplifes the process of submitting jobs, managing files, launching applications, and monitoring job status.
 
 ## Accessing OOD
 
@@ -28,4 +28,4 @@ If you access OOD from off campus, you will need to connect to the UW VPN. You c
 
 :::
 
-To access Hyak's Open OnDemand, open a web browser and navigate to [https://ondemand.hyak.uw.edu/](https://ondemand.hyak.uw.edu/). You will be prompted to log in with your UW NetID, password, and verify your identity with Duo.
+To access Hyak's Open OnDemand, open a web browser and navigate to [https://ondemand.hyak.uw.edu/](https://ondemand.hyak.uw.edu/). You will be prompted to log in with your UW NetID, password, and verify your identity with Duo. Once you have successfully logged in, you will be taken to our OOD dashboard.

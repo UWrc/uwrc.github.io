@@ -15,7 +15,7 @@ OOD allows users to launch notebooks on the Home directory without any set-up, s
 
 ## Accessing Jupyter
 
-To access Jupyter, navigate to [Hyak OnDemand](https://ondemand.hyak.uw.edu/) and select `Jupyter` under `Interactive Apps`. You will be prompted to enter information about the job you want to run. 
+To access Jupyter, navigate to [Hyak OnDemand](https://ondemand.hyak.uw.edu/) and select `Interactive Apps > Jupyter`. You will be prompted to enter information about the job you want to run. 
 
 ## Custom Environments
 
