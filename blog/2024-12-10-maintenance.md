@@ -16,7 +16,7 @@ Our December maintenance is complete. Thank you for your patience. The next main
 * Updated node images, ensuring the security and behavior you expect from Hyak `klone`.
 * We migrated LMOD modules and other tools and software stored in `/mmfs1/sw/` to Solid State Drives (SSDs). Users may notice increased speed of modules.
 
-### Office Hours onver Winter Break
+### Office Hours over Winter Break
 
 I will continue to hold **Zoom office hours** on Wednesdays at 2pm throughout December. Attendees need only register once and can attend any of the occurrences with the Zoom link that will arrive via email. [**Click here to Register for Zoom Office Hours.**](https://washington.zoom.us/meeting/register/tJMpce6vrz8sEtR5miKvhsQiXANt6lBORFTu)
 
