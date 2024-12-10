@@ -14,7 +14,7 @@ Our November maintenance is complete. Thank you for your patience while we make 
 
 The next maintenance will be **Tuesday December 10, 2024**. 
 
-### Noteable Updates
+### Notable Updates
 * We updated the GPU drivers to version 565.57.01 to patch security vulnerabilities CVE-2024-0117 through CVE-2024-0121 and CVE-2024-0126.
 * We migrated user Home directories to Solid State Drives (SSDs). Users may notice increased speed of software stored in Home directories.
 
