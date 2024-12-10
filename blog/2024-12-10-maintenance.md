@@ -12,7 +12,7 @@ Hello Hyak Community,
 
 Our December maintenance is complete. Thank you for your patience. The next maintenance will be **Tuesday January 14, 2025**. 
 
-### Noteable Updates
+### Notable Updates
 * Updated node images, ensuring the security and behavior you expect from Hyak `klone`.
 * We migrated LMOD modules and other tools and software stored in `/mmfs1/sw/` to Solid State Drives (SSDs). Users may notice increased speed of modules.
 
