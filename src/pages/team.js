@@ -48,6 +48,21 @@ export default function team() {
         <div class="avatar avatar--vertical">
           <img
             class="avatar__photo avatar__photo--xl"
+            src="/img/avatar/Sumaiya_Sathar.jpg"
+          />
+          <div class="avatar__intro">
+            <h4 class="avatar__name">Sumaiya</h4>
+            <small class="avatar__subtitle">
+              Technical Product Manager
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="avatar avatar--vertical">
+          <img
+            class="avatar__photo avatar__photo--xl"
             src="/img/avatar/avatar_uws_uwit.png"
           />
           <div class="avatar__intro">
