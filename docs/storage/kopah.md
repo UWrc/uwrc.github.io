@@ -13,9 +13,9 @@ Kopah storage accounts can be requested by sending an email to help@uw.edu with 
 ## Access
 You will need access key and secret key to access your Kopah account. When you open an account your keys are placed in your home directory on `klone` in a file called `kopah_groupname`, where the word "groupname" is associated Hyak group.
 
-S3 endpoint for Kopah is https://s3.kopah.orci.washington.edu
+S3 endpoint for Kopah is https://s3.kopah.uw.edu
 
-Bucket endpoint format is https://s3.kopah.orci.washington.edu/BUCKET
+Bucket endpoint format is https://s3.kopah.uw.edu/BUCKET
 
 Where the word "BUCKET" above is replaced with the name of your storage bucket.
 
@@ -26,3 +26,5 @@ Kopah is compatible with many S3-API client tools, which are numerous. Here we h
 * [**Graphical User Interface tools**](https://hyak.uw.edu/docs/storage/gui): solutions under this option include Graphical User Interfaces (GUIs) that offer convenient upload options like drag-and-drop from your local computer to Kopah. 
 
 * [**Command Line Interface tools**](https://hyak.uw.edu/docs/storage/cli): solutions under this option include Command Line Interfaces (CLIs) that can be used to upload files from your local computer to Kopah and can be used on Hyak's current generation cluster, `klone` to complete transfers prior to computing against the data.
+
+* [**Programmatic Usage**](https://hyak.uw.edu/docs/storage/boto3): solutions under this option include specialized Python libraries to build Kopah usage into your computing protocols.
