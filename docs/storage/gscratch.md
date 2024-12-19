@@ -141,8 +141,6 @@ If you need space but only temporarily (i.e., less than 3 weeks) then you can ma
 AUTO-DELETE: Files not accessed for 3 weeks (i.e., 21 days) in scrubbed will automatically be deleted. Consider purchasing `gscratch` storage if you want a more persistent storage location.
 :::
 
-Starting with the `klone` cluster there are additional differentiating factors beyond the auto-delete policy, namely that all read and writes here will only stay on spinning disk. `gscratch` on `klone` has access to a tiering engine that auto writes to a performant NVMe flash tier so scrubbed will be slower than paid for `gscratch` on `klone`.
-
 Please note the scrubbed space permissions are completely open by default so use Linux group changes and modifications to restrict access as appropriate.
 
 :::caution

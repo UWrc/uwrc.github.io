@@ -75,7 +75,7 @@ export default function systems() {
               <td align="right">Cluster</td><td><code>mox</code></td>
             </tr>
             <tr>
-              <td align="right">Service</td><td>June 2018 — January 1 2025</td>
+              <td align="right">Service</td><td>June 2018 — January 2025</td>
             </tr>
             <tr>
               <td align="right">Operating System</td><td>CentOS 7</td>
