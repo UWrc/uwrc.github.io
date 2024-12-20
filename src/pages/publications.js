@@ -194,12 +194,76 @@ export default function Publications() {
 
         </TabItem>
         <TabItem value="2022">
+          <h4>Aeronautics and Astronautics</h4>
+          <ol>
+            <li>Hu, J. A.; Rawls, M. L.; Yoachim, P.; Ivezić, Ž. Satellite Constellation Avoidance with the Rubin Observatory Legacy Survey of Space and Time. ApJL 2022, 941 (1), L15. DOI: https://doi.org/10.3847/2041-8213/aca592 </li>
+            <li>Haqq-Misra, J.; Kopparapu, R.; Fauchez, T. J.; Frank, A.; Wright, J. T.; Lingam, M. Detectability of Chlorofluorocarbons in the Atmospheres of Habitable M-Dwarf Planets. Planet. Sci. J. 2022, 3 (3), 60. DOI: https://doi.org/10.3847/PSJ/ac5404 </li>
+            <li>Aithal, A. B. Direct Numerical Simulation of a Spatially Developing Turbulent Boundary Layer Separating over a Curved Wall. Ph.D., University of Washington, United States -- Washington, 2022. https://www.proquest.com/docview/2730286582/abstract/CD2A0E475AB1463FPQ/1 </li>
+            <li>Wai, J. C. Reducing Fuel Evaporation Using Floating Objects. Ph.D., University of Washington, United States -- Washington, 2022. https://www.proquest.com/docview/2726392471/abstract/4BFC927229DD4441PQ/1 </li>
+            <li>Moeyens, J. The Characterization and Discovery of Solar System Small Bodies in Modern Astronomical Surveys. Ph.D., University of Washington, United States -- Washington, 2022. https://www.proquest.com/docview/2769190498/abstract/4B499FC1CF704258PQ/1</li>
+            <li>Huang, S.-C. (黃紹齊); Aithal, A. B.; Ferrante, A. Law of Incipient Separation for Turbulent Flows over Airfoils as Inferred by Reynolds-Averaged Navier–Stokes. Physics of Fluids 2022, 34 (8), 085117. DOI: https://doi.org/10.1063/5.0099523.</li>
+
+
+          </ol>
+
+          <h4>Chemical Engineering</h4>
+          <ol>
+            <li>Komp, E.; Valleau, S. Low-Cost Prediction of Molecular and Transition State Partition Functions via Machine Learning. Chemical Science 2022, 13 (26), 7900–7906. DOI: https://doi.org/10.1039/D2SC01334G </li>
+            <li>Qi, X.; Jin, B.; Cai, B.; Yan, F.; De Yoreo, J.; Chen, C.-L.; Pfaendtner, J. Molecular Driving Force for Facet Selectivity of Sequence-Defined Amphiphilic Peptoids at Au–Water Interfaces. J. Phys. Chem. B 2022, 126 (27), 5117–5126. DOI: https://doi.org/10.1021/acs.jpcb.2c02638 </li>
+            <li>Xie, Z.-L.; Liu, X.; Valentine, A. J. S.; Lynch, V. M.; Tiede, D. M.; Li, X.; Mulfort, K. L. Bimetallic Copper/Ruthenium/Osmium Complexes: Observation of Conformational Differences Between the Solution Phase and Solid State by Atomic Pair Distribution Function Analysis. Angewandte Chemie International Edition 2022, 61 (5), e202111764. DOI: https://doi.org/10.1002/anie.202111764 </li>
+            <li>Qi, X.; Zhao, Y.; Lachowski, K.; Boese, J.; Cai, Y.; Dollar, O.; Hellner, B.; Pozzo, L.; Pfaendtner, J.; Chun, J.; Baneyx, F.; Mundy, C. J. Predictive Theoretical Framework for Dynamic Control of Bioinspired Hybrid Nanoparticle Self-Assembly. ACS Nano 2022, 16 (2), 1919–1928. DOI: https://doi.org/10.1021/acsnano.1c04923 </li>
+            <li>Nyambura, C. W.; Sampath, J.; Nance, E.; Pfaendtner, J. Exploring Structure and Dynamics of the Polylactic-Co-Glycolic Acid–Polyethylene Glycol Copolymer and Its Homopolymer Constituents in Various Solvents Using All-Atom Molecular Dynamics. Journal of Applied Polymer Science 2022, 139 (31), e52732. DOI: https://doi.org/10.1002/app.52732 </li>
+            <li>G. Pelkie, B.; Valleau, S. Machine Learning the Quantum Flux–Flux Correlation Function for Catalytic Surface Reactions. Digital Discovery 2022, 1 (6), 851–858. DOI: https://doi.org/10.1039/D2DD00051B </li>
+            <li>Hare, S. R.; Pfaendtner, J. Elucidating the Role of Catalytic Amino Acid Residues in the Peptide-Mediated Silica Oligomerization Reaction Mechanism. Phys. Chem. Chem. Phys. 2022, 24 (6), 3664–3674. DOI: https://doi.org/10.1039/D1CP04542C </li>
+            <li>Intan, N. N.; Pfaendtner, J. Composition of Oxygen Functional Groups on Graphite Surfaces. J. Phys. Chem. C 2022, 126 (26), 10653–10667. DOI: https://doi.org/10.1021/acs.jpcc.2c01258 </li>
+            <li>Nyambura, C. W.; Nance, E.; Pfaendtner, J. Examining the Effect of Polymer Extension on Protein–Polymer Interactions That Occur during Formulation of Protein-Loaded Poly(Lactic Acid-Co-Glycolic Acid)-Polyethylene Glycol Nanoparticles. Polymers 2022, 14 (21), 4730. DOI: https://doi.org/10.3390/polym14214730 </li>
+            <li>Nyambura, C. W. Rational Design of Protein-Loaded Polymeric Nanoparticles: A Computational and Experimental Approach. Ph.D., University of Washington, United States -- Washington, 2022. https://www.proquest.com/docview/2719424803/abstract/A6818D28BB824660PQ/1 </li>
+
+
+
+          </ol>
+          <h4>Chemistry</h4>
+          <ol>
+            <li>Maloney, T. P.; Berman, J. L.; Michael, F. E. Metal-Free Allylic C−H Amination of Vinylsilanes and Vinylboronates Using Silicon or Boron as a Regioselectivity Switch. Angewandte Chemie 2022, 134 (45), e202210109. DOI: https://doi.org/10.1002/ange.202210109 </li>
+            <li>Wildman, A.; Tao, Z.; Zhao, L.; Hammes-Schiffer, S.; Li, X. Solvated Nuclear–Electronic Orbital Structure and Dynamics. J. Chem. Theory Comput. 2022, 18 (3), 1340–1346. DOI: https://doi.org/10.1021/acs.jctc.1c01285 </li>
+            <li>Liu, A.; Chow, M.; Wildman, A.; Frisch, M. J.; Hammes-Schiffer, S.; Li, X. Simultaneous Optimization of Nuclear–Electronic Orbitals. J. Phys. Chem. A 2022, 126 (39), 7033–7039. DOI: https://doi.org/10.1021/acs.jpca.2c05172 </li>
+            <li>Zheng, T.; L. Berman, J.; E. Michael, F. Diastereoconvergent Synthesis of Anti -1,2-Amino Alcohols with N-Containing Quaternary Stereocenters via Selenium-Catalyzed Intermolecular C–H Amination. Chemical Science 2022, 13 (33), 9685–9692. DOI: https://doi.org/10.1039/D2SC02648A </li>
+            <li>Parker Maloney, T.; F. Dohoda, A.; C. Zhu, A.; E. Michael, F. Stereoretentive and Regioselective Selenium-Catalyzed Intermolecular Propargylic C–H Amination of Alkynes. Chemical Science 2022, 13 (7), 2121–2127. DOI: https://doi.org/10.1039/D1SC07067C </li>
+            <li>Stropoli, S. J.; Khuu, T.; Messinger, J. P.; Karimova, N. V.; Boyer, M. A.; Zakai, I.; Mitra, S.; Lachowicz, A. L.; Yang, N.; Edington, S. C.; Gerber, R. B.; McCoy, A. B.; Johnson, M. A. Preparation and Characterization of the Halogen-Bonding Motif in the Isolated Cl–·IOH Complex with Cryogenic Ion Vibrational Spectroscopy. J. Phys. Chem. Lett. 2022, 13 (12), 2750–2756. DOI: https://doi.org/10.1021/acs.jpclett.2c00218 </li>
+            <li>Beck, R. A.; Sun, S.; Xu, X.; Gamelin, D. R.; Cao, T.; Li, X. Understanding External Pressure Effects and Interlayer Orbital Exchange Pathways in the Two-Dimensional Magnet─Chromium Triiodide. J. Phys. Chem. C 2022, 126 (45), 19327–19335. DOI: https://doi.org/10.1021/acs.jpcc.2c03884 </li>
+            <li>DiRisio, R. J.; Finney, J. M.; McCoy, A. B. Diffusion Monte Carlo Approaches for Studying Nuclear Quantum Effects in Fluxional Molecules. WIREs Computational Molecular Science 2022, 12 (6), e1615. DOI: https://doi.org/10.1002/wcms.1615 </li>
+            <li>Lu, F.; Cheng, L.; DiRisio, R. J.; Finney, J. M.; Boyer, M. A.; Moonkaen, P.; Sun, J.; Lee, S. J. R.; Deustua, J. E.; Miller, T. F. I.; McCoy, A. B. Fast Near Ab Initio Potential Energy Surfaces Using Machine Learning. J. Phys. Chem. A 2022, 126 (25), 4013–4024. DOI: https://doi.org/10.1021/acs.jpca.2c02243 </li>
+            <li>Bourgeois, M. R.; Rossi, A. W.; Khorasani, S.; Masiello, D. J. Optical Control over Thermal Distributions in Topologically Trivial and Non-Trivial Plasmon Lattices. ACS Photonics 2022, 9 (11), 3656–3667. DOI: https://doi.org/10.1021/acsphotonics.2c01155 </li>
+
+
+          </ol>
+          <h4>Civil and Environmental Engineering</h4>
+          <ol>
+            <li>Ni, W.; Morgan, J. A.; Horner-Devine, A. R.; Kumar, N.; Ahrendt, S. Impacts of Sea-Level Rise on Morphodynamics and Riverine Flooding in an Idealized Estuary. Water Resources Research 2022, 58 (12), e2022WR032544. DOI: https://doi.org/10.1029/2022WR032544 </li>
+            <li>Riddle, M. CFD Modeling of an Oscillating Wave Surge Converter Using the Overset Grid Method. Master’s, University of Washington, United States -- Washington, 2022. https://www.proquest.com/docview/2691798471/abstract/B3C34E7C06B34937PQ/1</li>
+            <li>Lewis, N. S.; Lehman, D. E.; Motley, M. R.; Arduino, P.; Roeder, C. W.; Pyke, C. N.; Sullivan, K. P. Integrated Study of Existing Tsunami Design Standards. Journal of Structural Engineering 2022, 148 (12), 04022200. DOI: https://doi.org/10.1061/(ASCE)ST.1943-541X.0003506 </li>
+          </ol>
+          
           <h4>Computer Science</h4>
           <ol>
             <li>Liu, Alisa, et al. "WANLI: Worker and AI Collaboration for Natural Language Inference Dataset Creation." arXiv preprint arXiv:<a href="https://arxiv.org/abs/2201.05955">2201.05955</a> (2022).</li>
-
             <li>Shridhar, Mohit, Lucas Manuelli, and Dieter Fox. "Cliport: What and where pathways for robotic manipulation." <i>Conference on Robot Learning</i>. PMLR, 2022. URL: <a href="https://proceedings.mlr.press/v164/shridhar22a.html">PDF</a></li>
+            <li>Hundt, A.; Agnew, W.; Zeng, V.; Kacianka, S.; Gombolay, M. Robots Enact Malignant Stereotypes. In Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency; FAccT ’22; Association for Computing Machinery: New York, NY, USA, 2022; pp 743–756. DOI: https://doi.org/10.1145/3531146.3533138 </li>
           </ol>
+
+          <h4>Mechanical Engineering</h4>
+          <ol>
+            <li>Xie, W.; Reder, N. P.; Koyuncu, C.; Leo, P.; Hawley, S.; Huang, H.; Mao, C.; Postupna, N.; Kang, S.; Serafin, R.; Gao, G.; Han, Q.; Bishop, K. W.; Barner, L. A.; Fu, P.; Wright, J. L.; Keene, C. D.; Vaughan, J. C.; Janowczyk, A.; Glaser, A. K.; Madabhushi, A.; True, L. D.; Liu, J. T. C. Prostate Cancer Risk Stratification via Nondestructive 3D Pathology with Deep Learning–Assisted Gland Analysis. Cancer Research 2022, 82 (2), 334–345. DOI: https://doi.org/10.1158/0008-5472.CAN-21-2843 </li>
+            <li>Meuris, B. Model Reduction for Dynamical Systems: Machine Learning and Memory. Ph.D., University of Washington, United States -- Washington, 2022. https://www.proquest.com/docview/2769228545/abstract/146F3F06E05C4AA4PQ/1</li>
+          </ol>
+
+          <h4>Physics</h4>
+          <ol>
+            <li>Illa, M.; Savage, M. J. Basic Elements for Simulations of Standard-Model Physics with Quantum Annealers: Multigrid and Clock States. Phys. Rev. A 2022, 106 (5), 052605. DOI: https://doi.org/10.1103/PhysRevA.106.052605</li>
+            <li>Tetef, S.; Kashyap, V.; Holden, W. M.; Velian, A.; Govind, N.; Seidler, G. T. Informed Chemical Classification of Organophosphorus Compounds via Unsupervised Machine Learning of X-Ray Absorption Spectroscopy and X-Ray Emission Spectroscopy. J. Phys. Chem. A 2022, 126 (29), 4862–4872. DOI: https://doi.org/10.1021/acs.jpca.2c03635 </li>
+          </ol>
+
+          
           
         </TabItem>
 
