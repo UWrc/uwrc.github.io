@@ -59,6 +59,7 @@ module.exports = {
       'tools/python',
       'tools/jupyter',
       'tools/matlab',
+      'tools/matemathica',
       {
         'Vs Code': [
           'tools/vscode',
