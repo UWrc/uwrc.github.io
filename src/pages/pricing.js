@@ -146,7 +146,7 @@ export default function Pricing() {
                   <div class="card">
                     <div class="card__header">
                       <h5>Annual Slot Fees for Self-Sponsored Slices</h5>
-                      <h3>$1,750 / year</h3>
+                      <h3>$1,750 / slot / year</h3>
                     </div>
                     <div class="card__footer">
                     <a href="https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=56f324af0faa6bc06cad419ce1050ed2"><button class="button button--secondary button--block">Buy Slices</button></a>
