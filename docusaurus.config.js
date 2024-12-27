@@ -124,6 +124,14 @@ module.exports = {
               label: 'School of Medicine',
               href: 'https://www.uwmedicine.org/school-of-medicine',
             },
+            {
+              label: 'UW Bothell',
+              href: 'https://www.uwb.edu/',
+            },
+            {
+              label: 'UW Tacoma',
+              href: 'https://www.tacoma.uw.edu/',
+            },
           ],
         },
         {
