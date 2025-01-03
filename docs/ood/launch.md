@@ -6,12 +6,6 @@ title: Scheduling Jobs
 [desktop-form]: /img/docs/ood/desktop-form.jpg 'Example Klone Desktop form submission'
 [desktop-running]: /img/docs/ood/desktop-running.jpg 'Example Klone Desktop running'
 
-:::caution
-
-This documentation is under construction.
-
-:::
-
 OOD can be used to manage and schedule jobs on the `klone` cluster. Specifically, OOD offers `Interactive Sessions` that streamline launching GUI based jobs like desktops, notebooks, and other software.
 
 # Launch an Interactive Session

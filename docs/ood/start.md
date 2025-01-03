@@ -4,12 +4,6 @@ title: Start Here
 ---
 
 :::caution
-
-This documentation is under construction!
-
-:::
-
-:::caution
 Open OnDemand is a new service on Hyak and is still in the process of being fully integrated. If you encounter any issues, have any questions, or would like to request a feature, let us know!
 :::
 

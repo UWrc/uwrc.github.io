@@ -3,12 +3,6 @@ id: jupyter
 title: Jupyter
 ---
 
-:::caution
-
-This documentation is under construction.
-
-:::
-
 Jupyter is a web-based interactive computing platform that allows users to create and share documents that contain live code, equations, visualizations, and narrative text. Jupyter notebooks are a great way to write and execute code in an interactive environment.
 
 OOD allows users to launch notebooks on the Home directory without any set-up, server configuration, or forwarding. 
