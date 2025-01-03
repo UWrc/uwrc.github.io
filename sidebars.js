@@ -44,6 +44,7 @@ module.exports = {
     'Open OnDemand': [
       'ood/start',
       'ood/schedule-job',
+      'ood/matlab',
       'ood/jupyter',
     ],
     'Tools & Software': [
