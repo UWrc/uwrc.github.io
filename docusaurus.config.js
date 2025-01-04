@@ -41,6 +41,20 @@ module.exports = {
           to: 'pricing',
           label: 'Pricing',
           position: 'right',
+          items: [
+            {
+              label: 'Compute',
+              to: '/pricing',
+            },
+            {
+              label: 'Storage',
+              to: '/storage',
+            },
+            {
+              label: 'Try Hyak',
+              to: '/demo',
+            },
+          ]
         },
         {
           to: 'docs',
@@ -54,7 +68,7 @@ module.exports = {
           position: 'right'
         },
         {
-          to: 'about', 
+          to: 'team', 
           label: 'About', 
           position: 'right',
           items: [

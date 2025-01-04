@@ -10,19 +10,10 @@ export default function Pricing() {
   return (
 <Layout title="Pricing">
   <div class="container">
-    <div class="row">
-      <br />
-    </div>
-    <Tabs
-      className="unique-tabs"
-      defaultValue="compute"
-      values={[
-        {label: 'Compute', value: 'compute'},
-        {label: 'Storage', value: 'storage'},
-        {label: 'Support', value: 'support'},
-        {label: 'Try Hyak', value: 'trial'},
-      ]}>
-      <TabItem value="compute">
+
+    <br></br>
+  <br></br>
+  <br></br>
         <div class="row">
           <div class="col">
             <a name="condo-model" />
@@ -169,117 +160,7 @@ export default function Pricing() {
 
           </div>
         </div>
-      </TabItem>
-      
-      <TabItem value="storage">
-        <div class="row">          
-
-          <div class="col">
-            <div class="card-demo">
-              <div class="card">
-                <div class="card__header">
-                  <h5>🔥 gscratch (Parallel File System)</h5>
-                  <h3>$10 / 1 TB [1M files] / 1 month</h3>
-                </div>
-                <div class="card__footer">
-                  <a href="mailto:help@uw.edu?subject=buy hyak (gscratch) capacity&body=I would like to buy some gscratch capacity on hyak.">
-                  <button class="button button--secondary button--block">Get gscratch Capacity</button></a>
-                </div>
-                <div class="card__body">
-                  What's included?
-                  <ul class="check">
-                    <li>A "hot" storage tier.</li>
-                    <li>On campus parallel file system directly connected to Hyak.</li>
-                    <li>No data access expenses or bandwidth limits.</li>
-                    <li>Direct high speed / low latency Infiniband connectivity with (Hyak) compute nodes.</li>
-                    <li>80 Gbps aggregate Ethernet upstream connectivity to external collaborators.</li>
-                    <li>Use of common tools to migrate data (e.g., scp, rsync).</li>
-                  </ul>
-                  <b>Note:</b> An existing Hyak group account is required.
-                </div>                    
-              </div>
-            </div>
-          </div>
-          
-          <div class="col">
-            <div class="card-demo">
-              <div class="card">
-                <div class="card__header">
-                  <h5>💧 KOPAH (Object Storage)</h5>
-                  <h3>Coming Soon</h3>
-                </div>
-                <div class="card__footer">
-                <a href="">
-                  <button class="button button--secondary button--block">Coming Soon</button></a>
-                </div>
-                <div class="card__body">
-                What's included?
-                  <ul class="check">
-                    <li>A "warm" storage tier.</li>
-                    <li>On campus object storage with 80 Gbps of aggregate upstream connectivity.</li>
-                    <li>No data access expenses or bandwidth limits.</li>
-                    <li>S3-compliant so any existing S3 tools can be used to copy and retrieve data.</li>
-                    <li>Public buckets for external data sharing.</li>
-                    <li>Private buckets for internal and lab-only access.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card-demo">
-              <div class="card">
-                <div class="card__header">
-                  <h5>🧊 LOLO Archive (Tape)</h5>
-                  <h3>$3.45 / 1 TB / 1 month</h3>
-                </div>
-                <div class="card__footer">
-                <a href="https://uw.service-now.com/sp?
-id=sc_cat_item&sys_id=d307c0cadb5e73c037ae9ec6db961963">
-                  <button class="button button--secondary button--block">Get LOLO Archive Capacity</button></a>
-                </div>
-                <div class="card__body">
-                What's included?
-                  <ul class="check">
-                    <li>A "cold" storage tier.</li>
-                    <li>Cloud tape archive storage medium, one of the most stable.</li>
-                    <li>No data access expenses or bandwidth limits.</li>
-                    <li>Use of common tools to migrate data (e.g., scp, rsync).</li>
-                    <li>Automatic geographical redundancy of your data (i.e., 2 copies).</li>          
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>            
-      </TabItem>
-
-      <TabItem value="support">
-      <p>All storage and compute purchases come with support. A team of systems and storage engineers as well as staff scientists will provide at least next business day acknowledgement of any emails or tickets. Depending on the nature of the request or question there may be further delayed follow up for the tasks at hand. To start a help ticket email help@uw.edu and include Hyak in the subject line. Or use the button below.</p>
-        
-        <a href="mailto:help@uw.edu?subject=hyak support&body=Please direct this message to the Hyak team.">
-            <button class="button button--secondary button--block">Request Support</button></a>
-      </TabItem>
-
-      <TabItem value="trial">
-      <h3>Hyak Demo Accounts</h3>
-            <p>Hyak no-cost demonstration accounts are intended for prospective slice owners to use the Hyak resources and assess whether the resources can serve their research computing needs. The account has some limits and not all features of Hyak will be available for demonstration, but you will be able to test workflows and software on the cluster.</p>  
-            <b>Demonstration accounts are subject to the following restrictions</b>:
-            <ul>
-              <li>Jobs may only be submitted to the <a href="https://hyak.uw.edu/docs/compute/checkpoint#the-checkpoint-partition">ckpt partition</a>.</li>
-              <li>Storage is limited under the demo account to <a href="https://hyak.uw.edu/docs/storage/gscratch#user-home-directory">10GB in the home directory</a>. For additional temporary storage you may utilize <a href="https://hyak.uw.edu/docs/storage/gscratch#scrubbed"> /gscratch/scrubbed storage</a>. Be aware that files in scrubbed not used for several months will be deleted. This storage in not intended for large datasets, but can be helpful as you try out workflows on Hyak.</li>
-              <li>You may submit as many jobs as you like, but the scheduler will only allow one to run at a time.</li>
-              <li>Your jobs are limited to 80 cores, 360 GB of memory, 2 GPUs, and a maximum of 2 discrete nodes.</li>
-            </ul>
-            <a href="mailto:help@uw.edu?subject=hyak demo account&body=I would like to open a Hyak demo account.">
-            <button class="button button--secondary button--block">Request a Hyak Demo Account</button></a>
-          
-      </TabItem>
-    </Tabs>
-
-  </div>
+        </div>
 </Layout>
   );
 }
