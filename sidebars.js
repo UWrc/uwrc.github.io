@@ -125,6 +125,7 @@ module.exports = {
       'glossary',
     ],
     'Contribution Guides': [
+      'contribute/pull-request',
       'contribute/markdown-guide',
       'contribute/link-markdown',
       'contribute/mdx',
