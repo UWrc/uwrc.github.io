@@ -92,3 +92,11 @@ If it sucessfully transferred, unzip it using `tar` and the `-xvf` flag:
 ``` bash
 tar -xvf data.tar
 ```
+
+### A Graphical User Interface for File Transfers – Cyberduck
+
+:::caution
+This documentation is under construction. 
+:::
+
+![](/img/docs/cyberduck/1_open_connection.png 'Open Connection')
