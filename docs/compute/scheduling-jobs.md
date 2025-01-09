@@ -10,16 +10,14 @@ To keep the login node in stable working order and ensure fair usage of the logi
 
 :::tip Check out our tutorial Focused on Slurm
 If you are new to Hyak and using the job scheduler, Slurm, you may find our Slurm tutorial helpful to walk you thorugh basic and advanced usage. [**Click here to jump to the tutorial.**](https://hyak.uw.edu/docs/hyak101/basics/syllabus_slurm)
+This tutorial can also be followed in video form [**HERE**](https://www.youtube.com/watch?v=iYM7xpRhp8I).
 :::
 
 ## Compute Resources
 
-The Slurm scheduler has two high-level concepts you need to know, [**accounts**](#accounts) and [**partitions**](#partitions).
-### Accounts
+The Slurm scheduler has two high-level concepts you need to know, [**accounts**](https://hyak.uw.edu/docs/compute/start-here#accounts) and [**partitions**](https://hyak.uw.edu/docs/compute/start-here#partitions).
 
 With the `hyakalloc` command [[**source code here**](/docs/compute/resource-monitoring#hyakalloc)] you can further see not only which accounts you are able to submit jobs to but also their current utilization. Resource limits are directly proportional to what was contributed by that group.
-
-### Partitions
 
 While you won't necessarily have access to them, it might be useful for you to see a list of Hyak's partitions. The `sinfo` commands contains information about the servers or nodes that compose Hyak, and the `sinfo -s` commands give you a summary for this information including the partitions and the hostnames that fall into each partition. 
 
