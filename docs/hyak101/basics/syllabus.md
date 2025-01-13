@@ -19,8 +19,9 @@ Much of the Hyak documentation is organized into bite sized instructional guides
 * Test out two methods for copying files to and from Hyak.
 
 
-:::tip PRO TIP
-As you go through the tutorial look for tips like this one. In these boxes, we will include bits of information you might be able to use to customize this tutorial into a workflow when you feel comfortable. 
+:::tip Video tutorial available
+
+On August 7, 2024, we delivered this tutorial live on Zoom. [**Follow this link to watch the live demonstration.**](https://youtu.be/WqGCJMQhiC0)
 :::
 
 ### Course Content
