@@ -30,11 +30,11 @@ export default function Pricing() {
             <a name="slice-cost-hardware" />
             <h3>Slice Hardware Configurations</h3>
 
-            <p>We currently offer HPC slices and GPU slices. Our current slice offering specifications are based on market price and availability. To request detailed Hyak slice pricing and information, please complete the <a href="https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=56f324af0faa6bc06cad419ce1050ed2"><b>Hyak Slice Pricing and Purchase Information Request Form</b></a>. Current configurations:</p>
+            <p>We currently offer HPC slices and GPU slices. Our current slice offering specifications are based on market price and availability. The following prices are from our last quotes, are subject to change, and should only be used for estimating costs. To request detailed Hyak slice pricing and information, please complete the <a href="https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=56f324af0faa6bc06cad419ce1050ed2"><b>Hyak Slice Pricing and Purchase Information Request Form</b></a>. Current configurations:</p>
             <p>
               <h4>Next-gen HPC slices (AMD):</h4>
               <ul>
-                <li>256GB: $3,892.00 (pending delivery and installation). <b>ORDER TODAY! Limited inventory remaining on current order.</b></li>
+                <li>256GB: $3,892.00 (pending order and delivery).</li>
               </ul>
               <h4>GPU slices (Nvidia):</h4>
               <ul>
