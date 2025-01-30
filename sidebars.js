@@ -54,7 +54,15 @@ module.exports = {
       'tools/containers',
       'tools/squashfs',
       'tools/modules-containers',
-      'tools/nvidia_ngc',
+      
+      {
+        'Ollama LLM': [
+          'tools/ollama_start',
+          'tools/nvidia_ngc',
+          'tools/ollama_setup',
+        ]
+      },
+
       'tools/dmtcp',
       'tools/r',
       'tools/python',
