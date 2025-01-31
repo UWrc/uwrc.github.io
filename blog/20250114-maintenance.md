@@ -8,8 +8,6 @@ author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [klone,hyak,hpc,supercomputer,hours,help,tools,training,rcc,updates,slurm,mathmatica,matlab,opportunities,internships]
 ---
 
-Hello Hyak Community,
-
 Our January maintenance is complete, and Klone is back in operation. The next maintenance is scheduled for **Tuesday February 11, 2025** (AKA the 2nd Tuesday of the month). 
 
 ### Notable Updates

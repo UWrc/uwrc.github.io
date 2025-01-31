@@ -8,8 +8,6 @@ author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [klone,hyak,hpc,supercomputer,hours,help,tools,training,rcc,updates,gpu]
 ---
 
-Hello Hyak Community,
-
 Our December maintenance is complete. Thank you for your patience. The next maintenance will be **Tuesday January 14, 2025**. 
 
 ### Notable Updates
