@@ -69,55 +69,52 @@ module.exports = {
         ]
       }
     ],
-    'Tutorial: Hyak Basics': [
-      'hyak101/basics/syllabus',
-      'hyak101/basics/login',
-      'hyak101/basics/system',
-      'hyak101/basics/linux',
-      'hyak101/basics/linux-2',
-    ],
-    'Tutorial: Containers': [
-      'hyak101/containers/syllabus',
-      'hyak101/containers/background',
-      'hyak101/containers/demonstration',
-      'hyak101/containers/build',
-    ],
-    'Tutorial: Slurm': [
-      'hyak101/basics/syllabus_slurm', 
-      'hyak101/basics/jobs',
-      'hyak101/basics/arrays',
+    'Tutorials': [
+      {
+        'Hyak Basics': [
+          'hyak101/basics/syllabus',
+          'hyak101/basics/login',
+          'hyak101/basics/system',
+          'hyak101/basics/linux',
+          'hyak101/basics/linux-2',
+        ]
+      },
+      {
+        'Containers': [
+          'hyak101/containers/syllabus',
+          'hyak101/containers/background',
+          'hyak101/containers/demonstration',
+          'hyak101/containers/build',
+        ]
+      },
+      {
+        'Slurm': [
+          'hyak101/basics/syllabus_slurm', 
+          'hyak101/basics/jobs',
+          'hyak101/basics/arrays',
+        ]
+      },
       {
         'Advanced Slurm': [
-          'hyak101/basics/advanced',
+          'hyak101/basics/advanced', 
           'hyak101/basics/nn_batch',
           'hyak101/basics/nn_array',
           'hyak101/basics/nn_bash',
         ]
       },
-    ],
-    'Tutorial: Jupyter Notebooks': [
-      'hyak101/python/syllabus',
-      'hyak101/python/setup',
-      'hyak101/python/container',
       {
-        'Mac/Linux Users': [
+        'Jupyter Notebooks': [
+          'hyak101/python/syllabus',
+          'hyak101/python/setup',
+          'hyak101/python/container',
           'hyak101/python/ssh',
           'hyak101/python/overlay',
           'hyak101/python/slurm-forward',
           'hyak101/python/start-up-seq',
           'hyak101/python/connect-vsc',
+          'hyak101/python/interactive',
         ]
       },
-      {
-        'Windows Users': [
-          'hyak101/python/win-ssh',
-          'hyak101/python/win-overlay',
-          'hyak101/python/win-slurm-forward',
-          'hyak101/python/win-start-up-seq',
-          'hyak101/python/win-connect-vsc',
-        ]
-      },
-      'hyak101/python/interactive',
     ],
     'Additional Resources': [
       'resources',
