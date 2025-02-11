@@ -56,8 +56,8 @@ module.exports = {
       'tools/modules-containers',
       
       {
-        'Ollama LLM': [
-          'tools/ollama_start',
+        'Using GPUs on Hyak': [
+          'tools/gpu_start',
           'tools/nvidia_ngc',
           'tools/ollama_setup',
         ]
