@@ -8,18 +8,22 @@ author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [klone,hyak,hpc,supercomputer,hours,help,tools,training,rcc,updates,opportunities]
 ---
 
-Our February maintenance is complete, and Klone is back in operation. The next maintenance is scheduled for **Tuesday March 11, 2025** (AKA the 2nd Tuesday of the month). 
+Our February maintenance is complete, and Klone is back in operation. The next maintenance is scheduled for **Tuesday March 11, 2025** (AKA the 2nd Tuesday of the month). Below we discuss notable updates from this maintenance session, upcoming user training, newly-released training videos, office hours, and opportunities from the national computing community! 
 
 ### Notable Updates
-* 
+* Security updates for firmware on all nodes. 
+* Software updates for security on the operating system. 
+* Increased resiliency of the job scheduler. 
 
 ### Upcoming Training
 
 **Hyak: Advanced Slurm** - This workshop will be held in person on **Wednesday February 26 10am - 11:45am in the eScience Classroom** (Address: WRF Data Science Studio, UW Physics/Astronomy Tower, 6th Floor; 3910 15th Ave NE, Seattle, WA 98195). For this tutorial, we'll use this container and a  [**publicly available dataset**](https://doi.org/10.1111/1755-0998.12056) to practice submitting single and array jobs to Hyak's job scheduler, Slurm. [**Locator**](https://elifesciences.org/articles/54507) is [**set of python tools**](https://github.com/kr-colab/locator.git) that builds a neural network with TensorFlow to estimate the location of organisms based on their genotype (DNA; or genetic background). The neural network is trained on genotypes from a set of organisms with known location. Performance is assessed with “unknown origin” genotypes by calculating the distance between their predicted and true location.  [**Click here to learn more and register for this event**](https://form.jotform.com/finchkn/hyak-advanced-slurm). 
 
-### New training video uploaded 
+### New training videos uploaded 
 
-[**Hyak: Open OnDemand recording from training on January 31**](https://youtu.be/U_LlktlDyI4?si=K2tctaFCc-bGonOQ). [**Open OnDemand (OOD)**](https://hyak.uw.edu/docs/ood/start) is an open-source web portal for HPC centers to provide users with an easy-to-use web interface to HPC clusters. For the last year, the Hyak team has been adding features to OOD. This workshop demonstrates OOD's main features such as exploring the filesystem, composing jobs, and launching interactive applications like Jupyter, Rstudio, MATLAB, and Virtual Desktop.  
+[**Hyak: Intro to Deep Learning recording from training on December 3**](https://youtu.be/YhsV6dGi5RU). Bernease Herman from the eScience Institute introduces deep learning concepts including data representations, data importance, learning tasks, deep learning frameworks, and computing environments. This training includes a hands-on demonstration of fully connected neural networks and convolutional neural networks with MNIST digit data and a brief discussion about deep learning frameworks on Hyak.  
+
+[**Hyak: Open OnDemand recording from training on January 31**](https://youtu.be/U_LlktlDyI4). [**Open OnDemand (OOD)**](https://hyak.uw.edu/docs/ood/start) is an open-source web portal for HPC centers to provide users with an easy-to-use web interface to HPC clusters. For the last year, the Hyak team has been adding features to OOD. This workshop demonstrates OOD's main features such as exploring the filesystem, composing jobs, and launching interactive applications like Jupyter, Rstudio, MATLAB, and Virtual Desktop. Training presented by UW Research Computing Intern, Bhavik Soni. 
 
 [**Check out our Research Computing Training Playlist on UW-IT's YouTube channel.**](https://youtube.com/playlist?list=PL-uLiqrTav1omqc7omKsLzRg2ng3nKCtj&si=ACwxjc0PV67AQfxm)
 
@@ -29,10 +33,10 @@ Our February maintenance is complete, and Klone is back in operation. The next m
 * Thursdays at 2pm in person in eScience. (address: WRF Data Science Studio, UW Physics/Astronomy Tower, 6th Floor, 3910 15th Ave NE, Seattle, WA 98195). [**Click here to visit the eScience Office Hours page to see additional eScience office hours including AI/ML, R, Earth Data, and Python (not available to help with Homework)**](https://escience.washington.edu/using-data-science/office-hours#office-hour-schedule). 
 * The Research Computing Club officers will be hosting office hours this term as well:  
 
-18-Feb: 11:30 AM – 12:30 PM 
-25-Feb: 11:30 AM – 12:30 PM 
-3-Mar: 3:00 PM – 4:00 PM 
-14-Mar: 12:00 PM – 1:00 PM 
+    * 18-Feb: 11:30 AM – 12:30 PM 
+    * 25-Feb: 11:30 AM – 12:30 PM 
+    * 3-Mar: 3:00 PM – 4:00 PM 
+    * 14-Mar: 12:00 PM – 1:00 PM 
  
 If you would like to request 1 on 1 help, please send an email to **help@uw.edu** with "Hyak Office Hour" in the subject line to coordinate a meeting.
 
