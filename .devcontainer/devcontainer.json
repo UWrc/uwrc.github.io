@@ -1,0 +1,25 @@
+{
+  // Configuration for the site preview codespace
+  "name": "Site Preview",
+  // Uses the _ base image
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    // Install git, node,js, ... to codespace
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest",
+      "ppa": "false"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+			"version": "none"
+		}
+  },
+  "customizations": {
+    "vscode": {
+      // Install a spell check extension to VSCode
+      "extensions": [
+        "streetsidesoftware.code-spell-checker"
+      ]
+    }
+  },
+  "postCreateCommand": "yarn install"
+}
