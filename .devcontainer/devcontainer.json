@@ -3,19 +3,16 @@
   "name": "Site Preview",
   // Uses the docker node base image
   "image": "node:latest",
-  "features": {
-    // Install git, node.js, and vim to codespace
-    "ghcr.io/devcontainers/features/git:1": {
-      "version": "latest",
-      "ppa": "false"
-    },
-    "ghcr.io/devcontainers/features/node:1": {
-	"version": "none"
-    },
-    "ghcr.io/martinaskestad/features/vimsrc:1": {
-	"version": "latest"
-    }
-  },
+  //"features": {
+    // Install git and vim to codespace. The node docker image includes node.js and yarn
+    //"ghcr.io/devcontainers/features/git:1": {
+      //"version": "latest",
+      //"ppa": "false"
+    //},
+    //"ghcr.io/guiyomh/features/vim:0": {
+	//"version": "latest"
+    //}
+  //},
   "customizations": {
     "vscode": {
       // Install useful extensions to VSCode
@@ -29,6 +26,10 @@
       ]
     }
   },
-  // After build export the required node options as required by the readme then yarn install
-  "postCreateCommand": "export NODE_OPTIONS=--openssl-legacy-provider && yarn install"
+  // Set NODE_OPTIONS as required by the readme
+  "containerEnv": {
+    "NODE_OPTIONS": "--openssl-legacy-provider"
+  },
+  // After building the container run yarn install
+  "onCreateCommand": "yarn install"
 }
