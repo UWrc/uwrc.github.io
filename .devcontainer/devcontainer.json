@@ -1,10 +1,10 @@
 {
   // Configuration for the site preview codespace
   "name": "Site Preview",
-  // Uses the _ base image
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  // Uses the docker node base image
+  "image": "node:latest",
   "features": {
-    // Install git, node,js, ... to codespace
+    // Install git, node.js, and vim to codespace
     "ghcr.io/devcontainers/features/git:1": {
       "version": "latest",
       "ppa": "false"
@@ -18,12 +18,17 @@
   },
   "customizations": {
     "vscode": {
-      // Install a spell check extension to VSCode
+      // Install useful extensions to VSCode
       "extensions": [
-        "streetsidesoftware.code-spell-checker"
+	// Spell check, with Hyak already added to the dictionary
+        "streetsidesoftware.code-spell-checker",
+	// Markdown shortcuts and utilites
+	"yzhang.markdown-all-in-one",
+	// Better markdown preview
+	"shd101wyy.markdown-preview-enhanced"
       ]
     }
   },
-  // export the required node options as required by the readme then install and build with yarn
-  "postCreateCommand": "export NODE_OPTIONS=--openssl-legacy-provider && yarn install && yarn build"
+  // After build export the required node options as required by the readme then yarn install
+  "postCreateCommand": "export NODE_OPTIONS=--openssl-legacy-provider && yarn install"
 }
