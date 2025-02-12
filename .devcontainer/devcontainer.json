@@ -10,8 +10,11 @@
       "ppa": "false"
     },
     "ghcr.io/devcontainers/features/node:1": {
-			"version": "none"
-		}
+	"version": "none"
+    },
+    "ghcr.io/martinaskestad/features/vimsrc:1": {
+	"version": "latest"
+    }
   },
   "customizations": {
     "vscode": {
@@ -21,5 +24,6 @@
       ]
     }
   },
-  "postCreateCommand": "yarn install"
+  // export the required node options as required by the readme then install and build with yarn
+  "postCreateCommand": "export NODE_OPTIONS=--openssl-legacy-provider && yarn install && yarn build"
 }
