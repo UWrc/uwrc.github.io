@@ -3,26 +3,16 @@
   "name": "Site Preview",
   // Uses the docker node base image
   "image": "node:latest",
-  //"features": {
-    // Install git and vim to codespace. The node docker image includes node.js and yarn
-    //"ghcr.io/devcontainers/features/git:1": {
-      //"version": "latest",
-      //"ppa": "false"
-    //},
-    //"ghcr.io/guiyomh/features/vim:0": {
-	//"version": "latest"
-    //}
-  //},
   "customizations": {
     "vscode": {
       // Install useful extensions to VSCode
       "extensions": [
-	// Spell check, with Hyak already added to the dictionary
+	      // Spell check, with Hyak already added to the dictionary
         "streetsidesoftware.code-spell-checker",
-	// Markdown shortcuts and utilites
-	"yzhang.markdown-all-in-one",
-	// Better markdown preview
-	"shd101wyy.markdown-preview-enhanced"
+        // Markdown shortcuts and utilites
+        "yzhang.markdown-all-in-one",
+        // Better markdown preview
+        "shd101wyy.markdown-preview-enhanced"
       ]
     }
   },
