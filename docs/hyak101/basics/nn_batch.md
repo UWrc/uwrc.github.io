@@ -3,15 +3,11 @@ id: nn_batch
 title: Interactive and Batch Jobs
 ---
 
-:::caution
-
-This documentation is under construction.
-
-:::
-
 ### Interactive Jobs
 
-An interactive session on the cluster allows users to access a computing node in real time for tasks that require direct interaction, exploration, or debugging. Request an interactive job with the `salloc` command. If you have a quick job or you are preparing software to use later, an interactive session is the best choice. Let's start an interactive job on the `ckpt` partition. We will specify that we want a single CPU with the flag `--cpus-per-task=1`, 10G of RAM with `--mem=10G`, and a maximum time of 2 hours with `--time=2:00:00`. The job will automatically end after 2 hours if we don't end it before 2 hours has elapsed. 
+An interactive session on the cluster allows users to access a computing node in real time for tasks that require direct interaction, exploration, or debugging. If you have a quick job or you are preparing software to use later, an interactive session is the best choice. 
+
+Request an interactive job with the `salloc` command. Let's start an interactive job on the `ckpt` partition. We will specify that we want a single CPU with the flag `--cpus-per-task=1`, 10G of RAM with `--mem=10G`, and a maximum time of 2 hours with `--time=2:00:00`. The job will automatically end after 2 hours if we don't end it with the command `exit` before 2 hours has elapsed. 
 
 ```bash
 salloc --partition=ckpt --cpus-per-task=1 --mem=10G --time=2:00:00
@@ -27,24 +23,18 @@ salloc: Nodes n3424 are ready for job
 ```
 Finally, your shell prompt will show that you are no longer on the login node, or look something like this: 
 ```bash
-[UWNetID@n3424 ~]$
+[UWNetID@n3424 basics]$
 ```
-Except that the word `UWNetID` will be replaced with your Net ID and `n3424` will be replaced with the node Slurm assigned to your interactive job. Finally, the `~` will be replaced with the name of your current directory (your location on the filesystem). 
+Except that the word `UWNetID` will be replaced with your Net ID, and `n3424` will be replaced with the node Slurm assigned to your interactive job. Finally, `basics` is the name of your current directory (your location on the filesystem), which maybe different for you. For this tutorial, you should be in the `basics` directory which you copied in the previous section. The `basics` directory contains the tutorial materials and will be your working directory for this tutorial. 
 
 #### Using Locator in interactive mode
 
-Now that we have a job open on a compute node, we can work interactively in the container and test out our code. If the container allows it (most do), you can open a shell within the container and access the software that is installed there, run software-specific commands, and test and debug your code before submitting jobs to run in the background. This can also be a recommended method to run a shorter job that doesn't need to be submitted to complete in the background. 
+Now that we have a job open on a compute node, we can work interactively in the container and test out our code. If the container allows it (most do), you can open a shell within the container and access the software that is installed there, run software-specific commands, and test and debug your code before submitting jobs to run unsupervised. This may also be your preferred method to run a job with a short runtime. 
 
 Before we do that, we will need a directory where our locator results will be stored. I'm going to call my locator results directory, `locator_out`.
 
 ```bash
 mkdir locator_out
-```
-
-Copy the container to your current directory if you haven't already. 
-```bash
-cp /mmfs1/sw/hyak101/basics/locator.sif .
-# The "." is short hand for "here" meaning to make a copy in your current directory.
 ```
 
 Next open a shell inside the locator container, `locator.sif` with the following command.
@@ -55,12 +45,12 @@ apptainer shell --cleanenv --bind /gscratch/ locator.sif
 
 Let's break this command down into its parts to understand it:
 
-* `apptainer shell` - Apptainer is the container program on Hyak and with `shell` we are asking apptainer to open a shell within the container.
-* `--cleanenv` - Containers have their own environment variables that must be set for the software they container to work properly. However, sometimes the environment variables from the host are too similar to those of the container, which can cause conflicts. The `--cleanenv` flag instructs the container to ignore environment variables from the host. 
-* `--bind /gscratch/` - The `--bind` flag mounts a file system to the container. The locator container and many containers do not include your data. Mounting the filesystem `/gscratch` means that the container can access datafiles that only exist outside of the container. 
-* `locator.sif` - The last part of the full command is to pass the name of the locator container to apptainer.
+* `apptainer shell` - Apptainer is the container runtime program on Hyak and with `shell` we are asking apptainer to open a shell into the container.
+* `--cleanenv` - Containers have their own environment variables that must be set for the software container to work properly. However, sometimes the environment variables from the host are too similar to those of the container, which can cause conflicts. The `--cleanenv` flag instructs the container to ignore environment variables from the host. 
+* `--bind /gscratch/` - The `--bind` flag mounts the Hyak filesystem `/gscratch/` to the container so that your datafiles can be computed against. By default, containers don't include your project data unless you specifically build them with a copy of your data. Mounting the filesystem `/gscratch` means that the container can access datafiles that do not exist inside the container. 
+* `locator.sif` - The last part of the full command is to pass the name of the Locator container to Apptainer.
 
-You will know that you are inside of the container when your shell prompt starts looks like the following: 
+You will know that you are inside of the container when your shell prompt looks like the following: 
 
 ```bash
 Apptainer>
@@ -72,16 +62,20 @@ Let's explore within the container by listing the root directory `/`
 ls /
 bin  boot  dev	environment  etc  gscratch  home  lib  lib64  locator  media  mmfs1  mnt  opt  proc  root  run	sbin  scr  singularity	srv  sys  tmp  usr  var
 ```
-Notice that we have all the directories we saw when we listed the root directory of `klone`, but now we have a directory `/locator/`, which contains the files associated with the [**Locator GitHub Repository**](https://github.com/kr-colab/locator.git). 
+Notice that we have all the directories we would have if we listed the root directory of `klone`, but now we have a directory `/locator/`, which contains the files associated with the [**Locator GitHub Repository**](https://github.com/kr-colab/locator.git). Let's list the Locator program files: 
 
 ```bash
 ls /locator/
+```
+```bash
 LICENSE.txt  README.md	data  locator_py  out  req.txt	scripts  setup.py
 ```
-Specifically the `/locator/scripts/` subdirectory contains a file called `locator.py`, which is the python script used to run locator nueral network. 
+Specifically the `/locator/scripts/` subdirectory contains a file called `locator.py`, which is the python script used to run Locator neural network. 
 
 ```bash
 ls /locator/scripts/
+```
+```bash
 install_R_packages.R  locator.py  locator_phased.py  plot_locator.R  vcf_to_zarr.py
 ```
 
@@ -89,6 +83,8 @@ Additionally, we have a version of python within the container and we can activa
 
 ```bash
 python
+```
+```bash
 Python 3.8.13 (default, Mar 29 2022, 14:56:46) 
 [GCC 8.3.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
@@ -97,29 +93,45 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 **Use `exit()` or hold the `Ctrl` key and press the `d` key to exit python. **
 
-Next, we can run locator with the *Populus trichocarpa* dataset. Copy the data to your current directory if you haven't already.
+Next, we can run locator with the *Populus trichocarpa* dataset. 
+
+:::caution 
+If you haven't already, it is critical you follow the [**set up instructions**](https://hyak.uw.edu/docs/hyak101/basics/advanced#tutorial-materials) to follow along. 
+:::
+
+First, let's take a look at the data.
 
 ```bash
-cp -r /mmfs1/sw/hyak101/basics/data/ .
-```
-First let's take a look at the data.
-
-```bash
-wc -l data/potr_genotypes.txt 
+wc -l data/potr_genotypes1000.txt 
 # The genotypes matrix has 425 lines
 # one row per individual tree plus a header
+```
+```bash
+425 data/potr_genotypes1000.txt
+```
 
-head data/potr_genotypes.txt
-"BELA.18.1"	1	0	0	0	0	0	0	0	0	2	0	0	2	0	1	0	0	0	0	NA	0	1	1	0	0	0
+```bash
+head data/potr_genotypes1000.txt
+```
+```bash
+"ALAA.20.1"	1	0	0	0	0	0	0	0	0	2	0	0	2	0	1	0	0	0	0	NA	0	1	1	0	0	0
+"BELA.18.2"	0	0	0	0	1	0	0	0	0	0	1	0	0	NA	2	0	1	0	1	0	0	1	0	0  1  NA
 ### Truncated for website view
-# The genotypes matrix is composed of 0s, 1s, 2s, or NA
-# The matrix has over 32,000 columns of genetic data
+```
+The genotypes matrix is composed of 0s, 1s, 2s, or NA. For this demonstration, I subsampled the full matrix (over 32,000 columns) such that this matrix has genotypes from 1000 sites in the genome.
 
+Let's look at the sample data files as well. 
+```bash
 wc -l data/potr_m_pred1.txt
-# The sample data list has 425 lines
-# one row per individual tree plus a header
-
+```
+```bash
+425 data/potr_m_pred1.txt
+```
+The sample data files each have 425 lines one row per individual tree plus a header
+```bash
 head data/potr_m_pred1.txt
+```
+```bash
 "sampleID"	"x"	"y"
 "BELA.18.3"	-126.166667	52.416667
 "BLCG.28.1"	-125.183333	49.833333
@@ -130,32 +142,36 @@ head data/potr_m_pred1.txt
 "CNYH.28.5"	-125.066667	49.666667
 "DENA.17.4"	-126.616667	52.766667
 "DENC.17.4"	NA	NA
-# The sample data contains the sample ID
-# longitude (x) and latitude (y) coordinates
-# each row is the origin of an individual tree
 ```
+The sample data contains:
+* the sample ID 
+* the origin as longitude (x) and latitude (y) coordinates in decimal degrees
+* each row is the origin of an individual tree
+
 10% of the tree origins in sample data were randomly replaced with NA. These trees will serve as the test set. Locator will train the neural network based on the genotypes of 90% of the trees of known origin, validate the neural network on 10% of the trees of known origin, and then predict the origins of the trees in the test set, providing a set of longitudes and latitudes that can be compared with the true origins of the test set trees. 
 
 Let's test the code by running locator on one test set `data/potr_m_pred1.txt`
 
 ```bash
-python /locator/scripts/locator.py --matrix data/potr_genotypes.txt --sample_data data/potr_m_pred1.txt --out locator_out/potr_predictions1
-# Be patient, this operation should take up to 10 minutes. 
+python /locator/scripts/locator.py --matrix data/potr_genotypes1000.txt --sample_data data/potr_m_pred1.txt --out locator_out/potr_predictions1 
+# you should see the Epochs begin to compute after 10-30 seconds
 ```
+
 Let's break this command down into its parts to understand it:
 
 * `python /locator/scripts/locator.py` - starts python and executes the `locator.py` python script
-* `--matrix data/potr_genotypes.txt` - `--matrix` is the arguement that indicates the provided file `data/potr_genotypes.txt` is the genotype matrix.
+* `--matrix data/potr_genotypes1000.txt` - `--matrix` is the arguement that indicates the provided file `data/potr_genotypes1000.txt` is the genotype matrix.
 * `--sample_data data/potr_m_pred1.txt` - `--sample_data` is the arguement that indicates the provided file  `data/potr_m_pred1.txt` is the sample data.
 * `--out locator_out/potr_predictions1` - `--out` is the arguement that indicates that results should be saved into the `locator_out/` directory and that the files should have the prefix `potr_predictions1`.
 
 You'll know it is working when it starts providing some messages. The first messages are errors that can be ignored, unless we plan to use a GPU. There will be a few more errors because tensorflow could use a GPU. We won't use a GPU, so we can ignore the errors. The following indicated a successful start of a locator run: 
 
 ```bash
-loaded (33070, 424, 2) genotypes
+loaded (1000, 424, 2) genotypes
+
 
 filtering SNPs
-running on 32530 genotypes after filtering
+running on 989 genotypes after filtering
 
 ### Truncated for website view
 To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
@@ -170,23 +186,34 @@ Epoch 2: val_loss improved from 0.70498 to 0.66874, saving model to locator_out/
 Epoch 3/5000
 11/11 [==============================] - ETA: 0s - loss: 0.6853
 Epoch 3: val_loss improved from 0.66874 to 0.63751, saving model to locator_out/potr_predictions1_weights.hdf5
-
+### Truncated for website view
 predicting locations...
-R2(x)=0.9933693838332506
-R2(y)=0.9944865271086664
-mean validation error 0.23313851423673718
-median validation error 0.20346116447588203
+R2(x)=0.9011147471513719
+R2(y)=0.9758116274801546
+mean validation error 0.6421174928291902
+median validation error 0.48744820589723886
 
-run time 4.914605208237966 minutes
+run time 0.5494037707646687 minutes
 ```
 
-Congratulations, you just trained a neural network based on genotypes of *Populus trichocarpa* trees sampled across and you have predicted origins for a test set of *Populus trichocarpa* trees based on their DNA alone. Let's look at your results. 
+Congratulations, you just trained a neural network based on genotypes of *Populus trichocarpa* trees sampled across and you have predicted origins for a test set of *Populus trichocarpa* trees based on their DNA alone. Of course this tutorial is only using a subset of 1000 genomic sites to predict the locations of the "unknown" cases, so the error is not acceptable for true predictive application. You are free to explore training with the full dataset `data/potr_genotypes.txt`.
+
+Let's look at your results. 
 
 ```bash
 ls locator_out/
+```
+```bash
 potr_predictions1_fitplot.pdf  potr_predictions1_history.txt  potr_predictions1_params.json  potr_predictions1_predlocs.txt
+```
+See the [**Locator publication**](https://elifesciences.org/articles/54507) (Battey et al. 2020) and [**Locator GitHub Repository**](https://github.com/kr-colab/locator.git) for full explanation of the output files. 
 
+The `potr_predictions1_predlocs.txt` file shows longitude and latitude postions for all individuals that were treated as unknowns in the test. 
+
+```bash
 head locator_out/potr_predictions1_predlocs.txt
+```
+```bash
 x,y,sampleID
 -134.91964819211591,58.435803669001785,ALSC.1.4
 -122.8459170387414,45.644072664997694,CARS.29.3
@@ -198,8 +225,7 @@ x,y,sampleID
 -126.78770090586458,52.82414669580753,DENC.17.4
 -126.79467698648334,52.83947566564575,DEND.17.4
 ```
-
-See the [**Locator publication**](https://elifesciences.org/articles/54507) (Battey et al. 2020) and [**Locator GitHub Repository**](https://github.com/kr-colab/locator.git) for full explanation of the output files. 
+These data can be used to calculate the Haversine distance (a.k.a. "as the crow flies") between the true origin and the predicted origin for each individual, providing a data point for model prediction error. Combining the model error for all individuals provides a distribution of model error that can help us assess the model for predicting the origin of black cottonwood trees using DNA alone, but that data analysis is the topic for a different tutorial. In the next section, we'll prepare a Slurm script to execute this command unsupervised or as a batch job. 
 
 ### Batch Jobs
 

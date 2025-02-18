@@ -4,25 +4,26 @@ title: Syllabus
 ---
 
 :::caution
-
-This documentation is under construction.
-
-:::
-
-### Goals & Rationale
-
 This tutorial was designed as the fourth is our Hyak 101 Tutorial series which includes: 
 1. [**Hyak Basics**](https://hyak.uw.edu/docs/hyak101/basics/syllabus)
 1. [**Containers**](https://hyak.uw.edu/docs/hyak101/containers/syllabus)
 1. [**Slurm**](https://hyak.uw.edu/docs/hyak101/basics/syllabus_slurm)
 
-The demonstrations presented in the Advanced Slurm tutorial build upon modules presented in the three tutorials listed above. We recommend you master the skills presented in those tutorials before proceeding. 
+**The demonstrations presented in the Advanced Slurm tutorial build upon modules presented in the three tutorials listed above. We recommend you master the skills presented in those tutorials before proceeding.**
+::: 
+
+### Goals & Rationale
 
 #### The main objective of this tutorial is to provide a worked example demonstrating the use of a software container and the Job Scheduler, Slurm
 
 Now that you have mastered: (1) using the command line to navigate and execute commands on Hyak, (2) building and customizing containers for your computing software, (3) and requesting jobs with Slurm, you are ready to combine all of these tasks. This tutorial offers an additional worked example that utilizes a container, computes against publicly available data, and uses Slurm to submit interactive, single batch, and array jobs with Slurm (i.e., submitting multiple jobs to be performed in parallel).
 
 #### Our ultimate goal is to prepare you as an independent user of Hyak. 
+
+:::tip Video tutorial available
+
+COMING SOON
+:::
 
 :::note Relevant Vocabulary
 
@@ -63,12 +64,17 @@ The ***hard*** way, isn't the ***wrong*** way. Anyway, it gets easier with pract
 
 
 ### Learning Objectives
-* TODO.
-
+* Provide an example of a protocol utilizing a software container and Slurm. 
+* Demonstrate how to submit interactive and single batch jobs with Slurm. 
+* Demonstrate how to set up an array job where each job is executing the same command on a different input file. 
+* Become familiar with how Bash scripting can be used to organize parallel computing. 
 
 ### Course Content
 
-TODO.
+* [**Set Up**](https://hyak.uw.edu/docs/hyak101/basics/advanced)
+* [**Interactive and Batch Jobs**](https://hyak.uw.edu/docs/hyak101/basics/nn_batch)
+* [**Parallel Computing**](https://hyak.uw.edu/docs/hyak101/basics/nn_array/)
+* [**Parameter Sweep**](https://hyak.uw.edu/docs/hyak101/basics/nn_bash)
 
 ### Extra Practice
 
