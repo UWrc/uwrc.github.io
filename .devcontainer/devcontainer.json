@@ -22,11 +22,11 @@
   },
   // Commands that run when the codespace is built
                       // Update app repos so we can install
-  "onCreateCommand": ["apt update &&", 
+  "onCreateCommand": ["apt update;", 
                       // Install nano text editor
-                      "(apt install nano;", 
+                      "apt install nano;", 
                       // Install github cli for syncing the fork and doing a PR from cli
-                      "apt install gh);", 
+                      "apt install gh;", 
                       // Install all of the yarn/js dependencies
                       "yarn install"],
   // Whenever the codespace starts up sync the fork to origin
