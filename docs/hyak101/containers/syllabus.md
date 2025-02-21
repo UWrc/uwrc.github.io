@@ -11,6 +11,12 @@ title: Syllabus
 
 **Most importantly, software containers allow Hyak researchers to install their software package and all its dependencies without root administrative privileges.** [**Click here to see the Hyak's Software Usage Policies for more information.**](https://hyak.uw.edu/docs/tools/software#software-usage-policy-for-hyak-users)
 
+:::tip Video tutorial available
+
+On August 21, 2024, we delivered this tutorial live on Zoom. [**Follow this link to watch the live demonstration.**](https://youtu.be/zPsvUQV_GV0)
+
+:::
+
 Much of the Hyak documentation is organized into bite sized instructional guides for particular software tools or concepts, but these may be too advanced for users who are brand new to High Performance Computing (HPC) and haven't used containers before. Here we have prepared a walk-through tutorial to demonstrate fundamental commands to build and use software containers. In this tutorial, we will explain what containers are and how and why they should be used in the Hyak research computing environment. We will provide exercises to give you practice using containers and building custom containers for your research. 
 
 #### Learning Objectives: 
@@ -20,12 +26,6 @@ Much of the Hyak documentation is organized into bite sized instructional guides
 * Become proficient in container usage. 
 * Practice building custom containers. 
 * Send a command to a container via a Slurm batch script. 
-
-:::tip Video tutorial available
-
-On August 21, 2024, we delivered this tutorial live on Zoom. [**Follow this link to watch the live demonstration.**](https://youtu.be/zPsvUQV_GV0)
-
-:::
 
 ### Tutorial Content
 

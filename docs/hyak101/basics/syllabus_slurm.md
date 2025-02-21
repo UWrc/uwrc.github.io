@@ -9,6 +9,11 @@ title: Syllabus
 
 Much of the Hyak documentation is organized into bite sized instructional guides for particular software tools or concepts, but these may be too advanced for users who are brand new to High Performance Computing (HPC) and and haven't used a job scheduler before. Here we have prepared a walk-through tutorial of Slurm commands so that you can feel comfortable working independently on Hyak and tailoring tools and scripts to the needs of your research project. The advanced section of this tutorial offers an additional worked example with publicly available data for submitting interactive, single, and array jobs with Slurm (i.e., submitting multiple jobs to be performed in parallel).
 
+:::tip Video tutorial available
+
+On August 14, 2024, we delivered this tutorial live on Zoom. [**Follow this link to watch the live demonstration.**](https://youtu.be/iYM7xpRhp8I)
+:::
+
 #### Our ultimate goal is to prepare you as an independent user of Hyak. 
 
 :::note Hyak's Job Scheduler - Slurm
@@ -24,37 +29,14 @@ A **job scheduler** is a component or software system responsible for managing a
 * Become familiar with job types and job submission, including requesting GPU jobs. 
 * Master monitoring the job queue.
 
-:::tip Video tutorial available
-
-On August 14, 2024, we delivered this tutorial live on Zoom. [**Follow this link to watch the live demonstration.**](https://youtu.be/iYM7xpRhp8I)
-:::
-
 ### Course Content
 
 **Tutorial: Slurm**
 * [**Syllabus**](https://hyak.uw.edu/docs/hyak101/basics/syllabus_slurm)
 * [**Scheduling Jobs**](https://hyak.uw.edu/docs/hyak101/basics/jobs)
 * [**Job Arrays**](https://hyak.uw.edu/docs/hyak101/basics/arrays)
-* **Advanced Slurm**
-    * [**Locator Neural Network**](https://hyak.uw.edu/docs/hyak101/basics/advanced)
-    * [**Interactive and Batch Jobs**](https://hyak.uw.edu/docs/hyak101/basics/nn_batch)
-    * [**Parallel Computing**](https://hyak.uw.edu/docs/hyak101/basics/nn_array)
-    * [**Parameter Sweep**](https://hyak.uw.edu/docs/hyak101/basics/nn_bash)
 
 ### Extra Practice
 
 We have curated a list of [**Additional Resources**](https://hyak.uw.edu/docs/resources) and you will find many are relevant for this tutorial. 
 
-:::info Acknowledgements
-In the advanced sections of this tutorial we use publicly available data and software. 
-
-Locator Neural Network is a copyright 2019 of C. J. Battey and released under a Non-Profit Open Software License 3.0 (NPOSL-3.0). 
-* [**Locator publication**](https://elifesciences.org/articles/54507) Battey et al. 2020.
-* [**Locator GitHub Repository**](https://github.com/kr-colab/locator.git) C. J. Battey and University of Oregon.
-* [**Repository for the Dockerfile for Locator NN**](https://github.com/finchnSNPs/Docker_kr-colab_locator) Kristen Finch (Hyak Staff Scientist).
-* [**DockerHub Repository for the Locator NN container**](https://hub.docker.com/repository/docker/finchnsnps/locator/general) Kristen Finch (Hyak Staff Scientist).
-
-Our adaptation of *Populus trichocarpa* genotype data and locations are licensed under a CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license.
-* [***Populus trichocarpa*** **Paper**](https://doi.org/10.1111/1755-0998.12056) Geraldes et al. 2013.
-* [**Original genotyping results available on DRYAD**](https://doi.org/10.5061/dryad.1051d) Geraldes et al. 2013.
-:::
