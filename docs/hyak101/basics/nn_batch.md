@@ -7,10 +7,10 @@ title: Interactive and Batch Jobs
 
 An interactive session on the cluster allows users to access a computing node in real time for tasks that require direct interaction, exploration, or debugging. If you have a quick job or you are preparing software to use later, an interactive session is the best choice. 
 
-Request an interactive job with the `salloc` command. Let's start an interactive job on the `ckpt` partition. We will specify that we want a single CPU with the flag `--cpus-per-task=1`, 10G of RAM with `--mem=10G`, and a maximum time of 2 hours with `--time=2:00:00`. The job will automatically end after 2 hours if we don't end it with the command `exit` before 2 hours has elapsed. 
+Request an interactive job with the `salloc` command. Let's start an interactive job on the `ckpt` partition. We will specify that we want a single CPU with the flag `--cpus-per-task=1`, 5G of RAM with `--mem=5G`, and a maximum time of 20 minutes with `--time=20:00`. The job will automatically end after 20 minutes if we don't end it with the command `exit` before 20 minutes has elapsed. 
 
 ```bash
-salloc --partition=ckpt --cpus-per-task=1 --mem=10G --time=2:00:00
+salloc --partition=ckpt --cpus-per-task=1 --mem=5G --time=20:00
 ```
 The output will look something like this:
 
@@ -31,10 +31,10 @@ Except that the word `UWNetID` will be replaced with your Net ID, and `n3424` wi
 
 Now that we have a job open on a compute node, we can work interactively in the container and test out our code. If the container allows it (most do), you can open a shell within the container and access the software that is installed there, run software-specific commands, and test and debug your code before submitting jobs to run unsupervised. This may also be your preferred method to run a job with a short runtime. 
 
-Before we do that, we will need a directory where our locator results will be stored. I'm going to call my locator results directory, `locator_out`.
+Before we do that, we will need a directory where our Locator results will be stored. For this tutorial, make a directory called `out` to hold your locator results. 
 
 ```bash
-mkdir locator_out
+mkdir out
 ```
 
 Next open a shell inside the locator container, `locator.sif` with the following command.
@@ -62,7 +62,7 @@ Let's explore within the container by listing the root directory `/`
 ls /
 bin  boot  dev	environment  etc  gscratch  home  lib  lib64  locator  media  mmfs1  mnt  opt  proc  root  run	sbin  scr  singularity	srv  sys  tmp  usr  var
 ```
-Notice that we have all the directories we would have if we listed the root directory of `klone`, but now we have a directory `/locator/`, which contains the files associated with the [**Locator GitHub Repository**](https://github.com/kr-colab/locator.git). Let's list the Locator program files: 
+Notice that we have all the directories we would have if we listed the root directory of `klone`, but now we have a directory `locator/`, which contains the files associated with the [**Locator GitHub Repository**](https://github.com/kr-colab/locator.git). Let's list the Locator program files: 
 
 ```bash
 ls /locator/
@@ -91,12 +91,12 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> 
 ```
 
-**Use `exit()` or hold the `Ctrl` key and press the `d` key to exit python. **
+**Use `exit()` or hold the `Ctrl` key and press the `D` key to exit python. **
 
-Next, we can run locator with the *Populus trichocarpa* dataset. 
+Next, we can run Locator with the *Populus trichocarpa* dataset. 
 
-:::caution 
-If you haven't already, it is critical you follow the [**set up instructions**](https://hyak.uw.edu/docs/hyak101/basics/advanced#tutorial-materials) to follow along. 
+:::warning 
+If you haven't already, it is critical you complete the [**set up instructions**](https://hyak.uw.edu/docs/hyak101/basics/advanced#tutorial-materials) to follow along. 
 :::
 
 First, let's take a look at the data.
@@ -111,9 +111,10 @@ wc -l data/potr_genotypes1000.txt
 ```
 
 ```bash
-head data/potr_genotypes1000.txt
+head -3 data/potr_genotypes1000.txt
 ```
 ```bash
+### Truncated for website view
 "ALAA.20.1"	1	0	0	0	0	0	0	0	0	2	0	0	2	0	1	0	0	0	0	NA	0	1	1	0	0	0
 "BELA.18.2"	0	0	0	0	1	0	0	0	0	0	1	0	0	NA	2	0	1	0	1	0	0	1	0	0  1  NA
 ### Truncated for website view
@@ -127,7 +128,7 @@ wc -l data/potr_m_pred1.txt
 ```bash
 425 data/potr_m_pred1.txt
 ```
-The sample data files each have 425 lines one row per individual tree plus a header
+The sample data files each have 425 lines one row per individual tree plus a header.
 ```bash
 head data/potr_m_pred1.txt
 ```
@@ -153,16 +154,16 @@ The sample data contains:
 Let's test the code by running locator on one test set `data/potr_m_pred1.txt`
 
 ```bash
-python /locator/scripts/locator.py --matrix data/potr_genotypes1000.txt --sample_data data/potr_m_pred1.txt --out locator_out/potr_predictions1 
+python /locator/scripts/locator.py --matrix data/potr_genotypes1000.txt --sample_data data/potr_m_pred1.txt --out out/potr_predictions1 
 # you should see the Epochs begin to compute after 10-30 seconds
 ```
 
 Let's break this command down into its parts to understand it:
 
-* `python /locator/scripts/locator.py` - starts python and executes the `locator.py` python script
+* `python /locator/scripts/locator.py` - executes the `locator.py` python script.
 * `--matrix data/potr_genotypes1000.txt` - `--matrix` is the arguement that indicates the provided file `data/potr_genotypes1000.txt` is the genotype matrix.
 * `--sample_data data/potr_m_pred1.txt` - `--sample_data` is the arguement that indicates the provided file  `data/potr_m_pred1.txt` is the sample data.
-* `--out locator_out/potr_predictions1` - `--out` is the arguement that indicates that results should be saved into the `locator_out/` directory and that the files should have the prefix `potr_predictions1`.
+* `--out out/potr_predictions1` - `--out` is the arguement that indicates that results should be saved into the `out/` directory and that the files should have the prefix `potr_predictions1`.
 
 You'll know it is working when it starts providing some messages. The first messages are errors that can be ignored, unless we plan to use a GPU. There will be a few more errors because tensorflow could use a GPU. We won't use a GPU, so we can ignore the errors. The following indicated a successful start of a locator run: 
 
@@ -177,15 +178,15 @@ running on 989 genotypes after filtering
 To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
 Epoch 1/5000
 11/11 [==============================] - ETA: 0s - loss: 1.3765
-Epoch 1: val_loss improved from inf to 0.70498, saving model to locator_out/potr_predictions1_weights.hdf5
+Epoch 1: val_loss improved from inf to 0.70498, saving model to out/potr_predictions1_weights.hdf5
 11/11 [==============================] - 2s 85ms/step - loss: 1.3765 - val_loss: 0.7050 - lr: 0.0010
 Epoch 2/5000
 11/11 [==============================] - ETA: 0s - loss: 0.8562
-Epoch 2: val_loss improved from 0.70498 to 0.66874, saving model to locator_out/potr_predictions1_weights.hdf5
+Epoch 2: val_loss improved from 0.70498 to 0.66874, saving model to out/potr_predictions1_weights.hdf5
 11/11 [==============================] - 1s 64ms/step - loss: 0.8562 - val_loss: 0.6687 - lr: 0.0010
 Epoch 3/5000
 11/11 [==============================] - ETA: 0s - loss: 0.6853
-Epoch 3: val_loss improved from 0.66874 to 0.63751, saving model to locator_out/potr_predictions1_weights.hdf5
+Epoch 3: val_loss improved from 0.66874 to 0.63751, saving model to out/potr_predictions1_weights.hdf5
 ### Truncated for website view
 predicting locations...
 R2(x)=0.9011147471513719
@@ -196,12 +197,12 @@ median validation error 0.48744820589723886
 run time 0.5494037707646687 minutes
 ```
 
-Congratulations, you just trained a neural network based on genotypes of *Populus trichocarpa* trees sampled across and you have predicted origins for a test set of *Populus trichocarpa* trees based on their DNA alone. Of course this tutorial is only using a subset of 1000 genomic sites to predict the locations of the "unknown" cases, so the error is not acceptable for true predictive application. You are free to explore training with the full dataset `data/potr_genotypes.txt`.
+With that command, you trained a neural network based on genotypes of *Populus trichocarpa* trees sampled across and you have predicted origins for a test set of *Populus trichocarpa* trees based on their DNA alone. Of course this tutorial is only using a subset of 1000 genomic sites to predict the locations of the "unknown" cases, so the error is not acceptable for true predictive application. You are free to explore training with the full dataset `data/potr_genotypes.txt`.
 
 Let's look at your results. 
 
 ```bash
-ls locator_out/
+ls out/
 ```
 ```bash
 potr_predictions1_fitplot.pdf  potr_predictions1_history.txt  potr_predictions1_params.json  potr_predictions1_predlocs.txt
@@ -211,7 +212,7 @@ See the [**Locator publication**](https://elifesciences.org/articles/54507) (Bat
 The `potr_predictions1_predlocs.txt` file shows longitude and latitude postions for all individuals that were treated as unknowns in the test. 
 
 ```bash
-head locator_out/potr_predictions1_predlocs.txt
+head out/potr_predictions1_predlocs.txt
 ```
 ```bash
 x,y,sampleID
@@ -225,28 +226,23 @@ x,y,sampleID
 -126.78770090586458,52.82414669580753,DENC.17.4
 -126.79467698648334,52.83947566564575,DEND.17.4
 ```
-These data can be used to calculate the Haversine distance (a.k.a. "as the crow flies") between the true origin and the predicted origin for each individual, providing a data point for model prediction error. Combining the model error for all individuals provides a distribution of model error that can help us assess the model for predicting the origin of black cottonwood trees using DNA alone, but that data analysis is the topic for a different tutorial. In the next section, we'll prepare a Slurm script to execute this command unsupervised or as a batch job. 
+These data can be used to calculate the Haversine distance (a.k.a. "as the crow flies") between the true origin and the predicted origin for each individual, providing a data point for model prediction error. Combining the model error for all individuals provides a distribution of model error that can help us assess the model for predicting the origin of black cottonwood trees using DNA alone, but that data analysis is the topic for a different tutorial. In the next section, we'll prepare a Slurm script to execute this command unsupervised as a batch job. 
+
+Exit the container with `exit`. Your command prompt should return. 
+
+```bash
+Apptainer> exit
+exit
+[UWNetID@n3162 basics]$
+```
 
 ### Batch Jobs
 
-Next we are going to execute the EXACT same code, but as a batch jobs and with the second test set `potr_m_pred2.txt`. Batch jobs are ideal for operations that take a longer time to run. These jobs are submitted to the job scheduler Slurm to execute and run in the background until completed. 
+Next we are going to execute the EXACT same code, but as a single batch job and with the second test set of individuals `potr_m_pred2.txt`. Batch jobs are ideal for operations that take a longer time to run. These jobs are submitted to the job scheduler Slurm to execute and run in the background until completed. 
 
-We made a Slurm batch script for this tutorial. You can use this script as a template for submitting a single job to Slurm and replace the main command with your command/s. 
+We made a Slurm batch script for this tutorial. You can use this script as a template for submitting a single job to Slurm and replace the main command with your own command/s. For this demonstration, we have made the script for a general user, so it submits the job to the `ckpt` partition, which can be changed. If you want to make further changes, you will want to read the comments in the script carefully to edit the script to fit your needs for a different task.
 
-First copy the template to your current directory if you haven't already. 
-
-```bash
-cp /mmfs1/sw/hyak101/basics/locator_NN_* .
-```
-
-If you have been following along, the following script should work without error (except errors that have to do with GPU usage and can be ignored). However, you will want to read the comments in the script carefully to edit the script to fit your needs for a different task.
-
-Use `cat` to view the script.
-
-```bash 
-cat locator_NN_job.slurm
-```
-And use the text editor `nano` to edit it as needed.
+Use the text editor `nano` to edit it as needed.
 
 ```bash 
 nano locator_NN_job.slurm
@@ -260,19 +256,18 @@ nano locator_NN_job.slurm
 #SBATCH --partition=ckpt
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --mem=50G
-#SBATCH --time=1:00:00
-#SBATCH -o %x_%j.out
+#SBATCH --mem=5G
+#SBATCH --time=10:00
+#SBATCH -o log/%x_%j.out
 
-#### Truncated for website view
 
-#command:
-apptainer exec --cleanenv --bind /gscratch locator.sif python /locator/scripts/locator.py --matrix data/potr_genotypes.txt --sample_data data/potr_m_pred2.txt --out locator_out/potr_predictions2
+# command:
+apptainer exec --cleanenv --bind /gscratch locator.sif python /locator/scripts/locator.py --matrix data/potr_genotypes1000.txt --sample_data data/potr_m_pred2.txt --out out/potr_predictions2
 
 #### Truncated for website view
 ```
 
-The lines in the script beginning with `#SBATCH` are sbatch directives, or flags passed to sbatch which give instructions about the job we are requesting. This script requests a single node, single task job with 10G of RAM for a maximum time of 1 hour. See [**Slurm sbatch documentation**](https://slurm.schedmd.com/sbatch.html) for the full list of options. Remember to use `hyakalloc` to find which accounts and partitions are available to you. If you have a `compute` parition, replace `--parition=ckpt` with `--partition=compute` and your job will be scheduled faster because you will be requesting a job on resources you can use with priority access. 
+The command being executed is the same as that explained above, but with a different `--sample_data` input file and a distinct prefix for the output files. The difference we are demonstrating with this exercise is the lines in the script beginning with `#SBATCH` also known as "sbatch directives" or flags passed to sbatch which give instructions about the job we are requesting. This script requests a **single node** or a single server/computer and a **single task** with **5G of RAM** or memory for a **maximum time of 10 minutes**. See [**Slurm sbatch documentation**](https://slurm.schedmd.com/sbatch.html) for the full list of options. Remember to use `hyakalloc` to find which accounts and partitions are available to you. If you have a `compute` or `cpu-g2` parition available, replace `--parition=ckpt` with `--partition=compute` or `--partition=cpu-g2` and your job will be scheduled faster because you will be requesting a job on resources with priority access. 
 
 Once you have edited the script to fit your needs, you can submit it with `sbatch`.
 
@@ -286,36 +281,48 @@ Submitted batch job 12345678
 ```
 
 :::tip Pro Tip
-Monitor the job with `squeue` and your `UWNetID` like the following example:
+#### Monitoring the Slurm Job Queue
 
+In this section, it is often useful to have two terminal windows open and logged into `klone`. One for editing scipts and issuing commands and one for monitoring active jobs in the squeue. Open up a second terminal and use `ssh` to login to Hyak. In this terminal, monitor jobs using the command:
 ```bash
-//highlight-next-line
-squeue -u UWNetID
-             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-          12345678   ckpt locator  UWNetID  R       3:15      1 n3088
+# Below replace the word "UWNetID" with your UW NetID.
+watch squeue -u UWNetID 
 ```
+`watch` will issue the following command ( `squeue -u UWNetID` ) every 2 seconds, allowing you to see the youbs you have submitted enter the queue and change states. Right now the queue is likely empty because we haven't requested any jobs yet, but they will appear in this window as we continue with the tutorial. 
+
+The STate of the job is listed under "ST" in this window. Some of the most common job states are:
+* PD: Pending job
+* R: Running job
+* S: Suspended job 
+* CG: Completing job
+* CD: Completed job
+
+In the next exercises, leave this terminal open and execute `watch -n 10 squeue -u UWNetID `. Continue with the exercises in the other terminal window. 
+
+![](/img/docs/hyak101/basics/two_terminals.png 'Screencapture showing two terminals.')
+
 :::
 
-Slurm will save a file called `locator_job_12345678.out` where the number is replaced with the JobID Slurm assigned to your job. The output that would normally be printed to the screen while locator is running (which we save when we ran locator interactively) will be saved to this file. View this file with `cat`
+As soon as the job begins, Slurm will save a file called `locator_job_12345678.out` where the number is replaced with the JobID Slurm assigned to your job. The output that would normally be printed to the screen while locator is running (which we saw when we ran locator interactively) will be saved to this file. View this file with `cat`
 
 ```bash
 cat locator_job_12345678.out
 ```
-Or follow the messages in real time with the `tail` command and the flag `--follow`
+Or follow the messages in real time with the `tail` command and the flag `--follow`.
 
 ```bash
 tail --follow locator_job_12345678.out
 # Use Ctrl + C to exit the tail command
 ```
 
-Congratulations, you just trained a neural network based on genotypes of *Populus trichocarpa* trees sampled across and you have predicted origins for a second test set of *Populus trichocarpa* trees based on their DNA alone. But this time you did it with a batch up. Let's look at your results. 
+Congratulations, you just trained a neural network based on genotypes of *Populus trichocarpa* trees and you have predicted origins for a second test set of *Populus trichocarpa* trees based on their DNA alone. But this time you did it with an unsupervised batch job. Let's look at your results. 
 
 ```bash
-ls locator_out/
+ls out/
 potr_predictions1_fitplot.pdf  potr_predictions1_params.json   potr_predictions2_fitplot.pdf  potr_predictions2_params.json
 potr_predictions1_history.txt  potr_predictions1_predlocs.txt  potr_predictions2_history.txt  potr_predictions2_predlocs.txt
 
-head locator_out/potr_predictions2_predlocs.txt
+head out/potr_predictions2_predlocs.txt
 x,y,sampleID
 -126.6824556618361,52.28918750153857,BELC.18.1
 -126.832089065367,52.31092787450795,BELC.18.5
@@ -328,12 +335,12 @@ x,y,sampleID
 -123.04024738823856,44.4420668151814,HALS.30.4
 ```
 
-That Slurm job completed completely in the background, meaning that we could have submitted the job, ended our connection to `klone` by logging out, and returned later to view the progress or results. You can instruct Slurm to send messages about jobs completing by adding the following sbatch directives to your Slurm script and replacing the work `UWNetID` with your UW Net ID: 
+The Slurm job completed completely in the background, meaning that we could have submitted the job, ended our connection to `klone` by logging out, and returned later to view the progress or results. You can instruct Slurm to send messages about jobs completing by adding the following sbatch directives to your Slurm script and replacing the work `UWNetID` with your UW Net ID: 
 
 ```bash
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=UWNetID@uw.edu
 ```
 
-In the nest section, we will use a Slurm batch script to submit multiple jobs as an array to be executed in the background in parallel. 
+In the next section, we will use a Slurm batch script to submit multiple jobs as an array to be executed in the background in parallel. 
 

@@ -108,7 +108,7 @@ module.exports = {
           'hyak101/basics/advanced', 
           'hyak101/basics/nn_batch',
           'hyak101/basics/nn_array',
-          'hyak101/basics/nn_bash',
+          'hyak101/basics/nn_sweep',
         ]
       },
       {
