@@ -5,6 +5,16 @@
   "image": "node:latest",
   "customizations": {
     "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "git.autofetch": true,
+        "files.autoSave": "afterDelay",
+        "cSpell.words": [
+        "autofetch",
+        "Hyak",
+        "yzhang"
+        ]
+      },
       // Install useful extensions to VSCode
       "extensions": [
 	      // Spell check, with Hyak already added to the dictionary
@@ -21,14 +31,13 @@
     "NODE_OPTIONS": "--openssl-legacy-provider"
   },
   // Commands that run when the codespace is built
-  "onCreateCommand": "apt update && (apt install nano; apt install gh); gh repo set-default UWrc/UWrc.github.io; yarn install",
+  "onCreateCommand": "apt update && (apt install nano; apt install gh); gh repo set-default UWrc/UWrc.github.io; yarn install; cat bashrc >> /etc/bash.bashrc",
                       // Update app repos so we can install, if this fails skip the apt installs
                       // Install nano text editor
                       // Install github cli for syncing the fork and doing a PR from cli
                       // Set default repo to UWrc/UWrc.github.io
                       // Install all of the yarn/js dependencies
+                      // Append the bashrc file to /etc/bash.bashrc so it applies system wide
   // Whenever the codespace starts up sync the fork to UWrc
-  "postStartCommand": "gh repo sync $(git config --get remote.origin.url)",
-  // Once the terminal attaches to the container create aliases for syncing the fork and submitting a pull request
-  "postAttachCommand": "alias sync='gh repo sync $(git config --get remote.origin.url)'; alias pr='gh pr create --label documentation --title'"
+  "postStartCommand": "gh repo sync $(git config --get remote.origin.url)"
 }
