@@ -30,7 +30,7 @@
     "NODE_OPTIONS": "--openssl-legacy-provider"
   },
   // Commands that run when the codespace is built
-  "onCreateCommand": "apt update && (apt install nano; apt install gh); gh repo set-default UWrc/UWrc.github.io; yarn install; cat bashrc >> /etc/bash.bashrc",
+  "onCreateCommand": "apt update && (apt install nano; apt install gh); gh repo set-default UWrc/UWrc.github.io; yarn install; cat ${containerWorkspaceFolder}/.devcontainer/bashrc >> /etc/bash.bashrc",
                       // Update app repos so we can install, if this fails skip the apt installs
                       // Install nano text editor
                       // Install github cli for syncing the fork and doing a PR from cli
