@@ -30,5 +30,5 @@
   // Whenever the codespace starts up sync the fork to UWrc
   "postStartCommand": "gh repo sync $(git config --get remote.origin.url)",
   // Once the terminal attaches to the container create aliases for syncing the fork and submitting a pull request
-  "postAttachCommand": "alias sync='gh repo sync $(git config --get remote.origin.url)'; alias pr='gh pr create '"
+  "postAttachCommand": "alias sync='gh repo sync $(git config --get remote.origin.url)'; alias pr='gh pr create --label documentation'"
 }
