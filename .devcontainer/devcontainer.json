@@ -9,9 +9,9 @@
         "git.autofetch": true,
         "files.autoSave": "afterDelay",
         "cSpell.words": [
-        "autofetch",
-        "Hyak",
-        "yzhang"
+          "autofetch",
+          "Hyak",
+          "yzhang"
         ]
       },
       // Install useful extensions to VSCode
